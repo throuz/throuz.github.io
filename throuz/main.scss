@@ -27,6 +27,9 @@ nav {
         margin-left: auto;
         margin-right: 15px;
     }
+    button:focus {
+        outline: 5px auto #ffffff;
+    }
     #navbarSupportedContent {
         ul {
             margin-right: 8%;
@@ -38,6 +41,9 @@ nav {
                 a {
                     color: black;
                 }
+            }
+            .hvr-underline-from-left:before {
+                background-color: #999999;
             }
         }
     }
@@ -164,61 +170,127 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
     h2 {
         width: 100%;
         text-align: center;
         margin-bottom: 30px;
         font-weight: bold;
         letter-spacing: 6px;
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
     }
     .gallery-thumbs {
         width: 60%;
         box-sizing: border-box;
         padding-bottom: 30px;
-        .swiper-slide {
-            width: 25%;
-            height: 100%;
-            opacity: 0.4;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            h5 {
-                text-align: center;
-            }
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding-bottom: 10px;
         }
-        .swiper-slide-thumb-active {
-            opacity: 1;
+        .swiper-wrapper {
+            @media screen and (max-width: 768px) {
+                height: 90px;
+            }
+            .swiper-slide {
+                cursor: pointer;
+                opacity: 0.4;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                @media screen and (max-width: 768px) {
+                    height: 50%;
+                }
+                h5 {
+                    text-align: center;
+                    margin: 0;
+                    @media screen and (max-width: 768px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .hvr-underline-from-left:before {
+                background-color: #999999;
+                @media screen and (max-width: 768px) {
+                    background-color: #99999900;
+                }
+            }
+            .swiper-slide-thumb-active {
+                opacity: 1;
+            }
         }
     }
     .gallery-top {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
+        @media screen and (max-width: 768px) {
+        }
         .swiper-slide {
             background-size: cover;
             background-position: center;
             display: flex;
             flex-wrap: wrap;
             .slide_text {
+                position: relative;
                 width: 30%;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
                 align-items: center;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    // height: 50%;
+                }
+                p {
+                    line-height: 40px;
+                    @media screen and (max-width: 768px) {
+                        line-height: 30px;
+                        font-size: 15px;
+                        padding-left: 0;
+                    }
+                }
+                a {
+                    position: absolute;
+                    right: 3vw;
+                    bottom: 50px;
+                    text-decoration: none;
+                    @media screen and (max-width: 768px) {
+                        right: 10px;
+                        bottom: 10px;
+                    }
+                }
+                .hvr-underline-from-left:before {
+                    background-color: #999999;
+                }
             }
             .img_box {
                 width: 70%;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
                 img {
-                    width: 93%;
-                    height: 95%;
+                    width: 100%;
+                    height: 97%;
                 }
             }
         }
     }
-    .swiper-scrollbar {
-        width: 90%;
-        left: 5%;
+    .swiper-button-next {
+        right: 5vw;
+        top: 60%;
+        @media screen and (max-width: 768px) {
+            right: 1vw;
+        }
+    }
+    .swiper-button-prev {
+        left: 5vw;
+        top: 60%;
+        @media screen and (max-width: 768px) {
+            left: 1vw;
+        }
     }
 }
 
@@ -270,6 +342,9 @@ nav {
                             right: 30px;
                             bottom: 0;
                             text-decoration: none;
+                        }
+                        .hvr-underline-from-left:before {
+                            background-color: #999999;
                         }
                     }
                     .nearby_content_right {
