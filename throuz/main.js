@@ -16,14 +16,19 @@ AOS.init();
 
 // Initialize Swiper
 var galleryThumbs = new Swiper('.gallery-thumbs', {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
+    slidesPerView: 2,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    // test
+    slidesPerColumn: 2,
+    breakpoints: {
+        768: {
+            slidesPerView: 4,
+            slidesPerColumn: 1,
+        },
+    }
 });
 var galleryTop = new Swiper('.gallery-top', {
-    spaceBetween: 10,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -34,5 +39,5 @@ var galleryTop = new Swiper('.gallery-top', {
     scrollbar: {
         el: '.swiper-scrollbar',
         // hide: true,
-      },
+    },
 });
