@@ -41,3 +41,4 @@ var galleryTop = new Swiper('.gallery-top', {
         // hide: true,
     },
 });
+

@@ -1,5 +1,22 @@
 $main-color: #000;
-$title: 70px;
+
+@mixin title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    @media screen and (max-width: 768px) {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+@mixin subtitle {
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
+}
 
 html {
     scroll-behavior: smooth;
@@ -38,6 +55,12 @@ nav {
                 padding: 0 20px;
                 list-style: none;
                 display: inline;
+                @media screen and (max-width: 1200px) {
+                    font-size: 20px;
+                }
+                @media screen and (max-width: 1090px) {
+                    font-size: 15px;
+                }
                 a {
                     color: black;
                 }
@@ -120,11 +143,17 @@ nav {
 
 #back_to_top {
     position: fixed;
-    right: 30px;
+    right: 20px;
     bottom: 100px;
     color: $main-color;
     text-decoration: none;
-    z-index: 1;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
     &:hover {
         .fa-angle-up {
             display: none;
@@ -133,8 +162,16 @@ nav {
             display: block;
         }
     }
+    .fa-angle-up {
+        margin-top: -20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .fa-caret-up {
+        margin-top: -20px;
         display: none;
+        margin-left: auto;
+        margin-right: auto;
     }
     h4 {
         text-align: center;
@@ -171,6 +208,7 @@ nav {
     display: flex;
     justify-content: space-between;
     position: relative;
+    background-image: url(./svg1.svg);
 
     .svg1 {
         position: absolute !important;
@@ -234,15 +272,15 @@ nav {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    @media screen and (max-width: 768px) {
+        padding: 15% 0;
+    }
 
     .word_box3 {
         width: auto;
         margin-left: 30%;
         padding-top: 5%;
         color: white;
-        font-size: 40px;
-        font-family: "微軟正黑體";
-
         .sec {
             padding-left: 250px;
         }
@@ -257,15 +295,7 @@ nav {
     justify-content: center;
     position: relative;
     h2 {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 30px;
-        font-weight: bold;
-        letter-spacing: 6px;
-        @media screen and (max-width: 768px) {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
+        @include title;
     }
     .gallery-thumbs {
         width: 60%;
@@ -342,6 +372,13 @@ nav {
                     right: 3vw;
                     bottom: 50px;
                     text-decoration: none;
+                    background-color: rgb(91, 91, 216);
+                    padding: 5px;
+                    color: white;
+                    transition-duration: 0.5s;
+                    &:hover {
+                        background-color: rgb(59, 33, 202);
+                    }
                     @media screen and (max-width: 768px) {
                         right: 10px;
                         bottom: 10px;
@@ -383,20 +420,19 @@ nav {
 .anchor {
     margin-top: -118px;
     margin-bottom: 118px;
+    @media screen and (max-width: 768px) {
+        margin-top: -82px;
+        margin-bottom: 82px;
+    }
 }
 #seventh {
-    padding: 60px 0;
+    padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     .content {
         h2 {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: bold;
-            letter-spacing: 6px;
-            margin-bottom: 30px;
+            @include title;
         }
         .container {
             .row {
@@ -413,11 +449,16 @@ nav {
                         border-radius: 50%;
                     }
                     .nearby_content {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
+                        // display: flex;
+                        // flex-wrap: wrap;
+                        // justify-content: center;
                         position: relative;
                         height: 300px;
+                        h4 {
+                            @include subtitle;
+                            text-align: center;
+                            margin-bottom: 30px;
+                        }
                         p {
                             padding: 0 30px;
                         }
@@ -448,16 +489,14 @@ nav {
 
 #eighth {
     padding: 60px 0;
+    background-color: #000000;
     h2 {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 30px;
-        font-weight: bold;
-        letter-spacing: 6px;
+        @include title;
+        color: white;
     }
     .iframe_box {
         padding: 20px;
-        background-color: #999999;
+        background-color: #000000;
     }
 }
 
@@ -549,10 +588,6 @@ footer {
         }
     }
 
-    #seventh_anchor {
-        margin-top: -82px;
-        margin-bottom: 82px;
-    }
     #seventh {
         .content {
             .container {
@@ -587,7 +622,7 @@ footer {
     #eighth {
         .iframe_box {
             iframe {
-                width: 100%;
+                width: 90vw;
                 height: 50vh;
             }
         }
@@ -629,7 +664,6 @@ footer {
 
         #section3 {
             width: 100%;
-            height: 40vh;
         }
     }
 
