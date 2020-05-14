@@ -29,9 +29,25 @@
     <!-- group_project.css -->
     <link rel="stylesheet" href="Group_project.css">
     <title>Document</title>
+
+    <link rel="stylesheet" href="loading.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;562;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
+    <section class="block">
+        <div class="loading loading06">
+          <span data-text="T">T</span>
+          <span data-text="h">h</span>
+          <span data-text="e">e</span>
+          <span data-text=""></span>
+          <span data-text="O">O</span>
+          <span data-text="n">n</span>
+          <span data-text="e">e</span>
+        </div>
+      </section>
+      <div class="content none">
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="#">
             <h1>The One</h1>
@@ -336,6 +352,7 @@
     <footer>
         <p>Copyright © 2020 the The One Villa Reserved</p>
     </footer>
+</div>
 
     <!-- bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -517,6 +534,14 @@
 
         SplittingImage('.tiler-overlay', { rows: 3, cols: 3 });
 
+
+    var block = document.querySelector(".block")
+    var content = document.querySelector(".content")
+
+    setTimeout(function () {
+      block.classList.add("none")
+      content.classList.remove("none")
+    }, 5000);
     </script>
 </body>
 
