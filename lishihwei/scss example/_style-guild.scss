@@ -1,0 +1,31 @@
+// 1.宣告變數,透過有意義的變數名稱歸類樣式
+$bg_black: #000;
+$bg_white: #fff;
+
+$color_white: #fff;
+$color_black: #000;
+
+$font-title: 30px;
+$font-text: 18px;
+
+
+
+// 4. mixin
+
+@mixin font-setting( $size,$color,$weight) {
+    font-size:$size;
+    color:$color;
+    font-weight:$weight;
+}
+
+@mixin shadow() {
+    text-shadow: 2px 2px 3px #333333;
+}
+
+@mixin linear-gradient($left , $right) {
+    background: linear-gradient(0deg, $left 0%, $right 100%);
+}
+
+
+
+// 5. function

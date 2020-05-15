@@ -1,6 +1,5 @@
-@charset "UTF-8";
 body {
-  font-family: "微軟正黑體";
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: #000;
   margin: 0;
@@ -23,52 +22,21 @@ nav .navbar-brand h1 {
   font-weight: 900;
 }
 
-@media screen and (max-width: 768px) {
-  nav .navbar-brand h1 {
-    font-size: 40px;
-    color: white;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  nav .fa-phone-alt {
-    color: white;
-    display: block;
-    margin-left: auto;
-    margin-right: 15px;
-  }
-}
-
-nav #navbarSupportedContent ul {
-  margin-right: 8%;
-}
-
 nav #navbarSupportedContent ul li {
   font-size: 25px;
   padding: 0 20px;
   list-style: none;
   display: inline;
-  color: white;
-}
-
-@media (max-width: 1220px) {
-  nav #navbarSupportedContent ul li {
-    font-size: 18px;
-    padding: 0 5px;
-  }
 }
 
 nav #navbarSupportedContent ul li a {
   color: white;
 }
 
-#swiper_banner {
-  padding: 60px 0;
-}
-
-@media (max-width: 768px) {
-  #swiper_banner {
-    padding: 0;
+@media (max-width: 1125px) {
+  nav #navbarSupportedContent ul li a {
+    font-size: 20px;
+    padding: 0 5px;
   }
 }
 
@@ -78,12 +46,10 @@ nav #navbarSupportedContent ul li a {
   }
 }
 
-#swiper_banner .main .title_text h2 {
+#swiper_banner .main .title_text h3 {
   text-align: center;
   margin: 0;
-  margin-bottom: 30px;
-  font-weight: bold;
-  letter-spacing: 6px;
+  padding: 25px 0;
 }
 
 #swiper_banner .main .block .container {
@@ -144,20 +110,8 @@ nav #navbarSupportedContent ul li a {
   margin: 30px 0;
 }
 
-#section_A .container .row .item .houses p {
-  font-size: 14px;
-  line-height: 35px;
-  letter-spacing: 1px;
-}
-
 #section_A .container .row .item .price h5 {
   margin: 30px 0;
-}
-
-#section_A .container .row .item .price p {
-  font-size: 14px;
-  line-height: 35px;
-  letter-spacing: 1px;
 }
 
 #section_B .container .note .big_title h5 {
@@ -179,41 +133,5 @@ nav #navbarSupportedContent ul li a {
 
 #section_B .container .text_content {
   margin-bottom: 30px;
-}
-
-#section_B .container .text_content p {
-  font-size: 14px;
-  line-height: 35px;
-  letter-spacing: 1px;
-}
-
-footer {
-  background-color: black;
-}
-
-footer p {
-  margin: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  padding: 16px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-  footer {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  footer {
-    font-size: 10px;
-  }
 }
 /*# sourceMappingURL=swiper_scss.css.map */
