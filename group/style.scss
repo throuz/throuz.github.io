@@ -154,7 +154,16 @@ nav {
     height: 90px;
     display: flex;
     flex-direction: column;
+    transition-duration: 0.3s;
+    @media screen and (max-width: 768px) {
+        width: 55px;
+        height: 55px;
+        right: 10px;
+        bottom: 10px;
+        font-size: 10px;
+    }
     &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
         .fa-angle-up {
             display: none;
         }
@@ -166,16 +175,27 @@ nav {
         margin-top: -20px;
         margin-left: auto;
         margin-right: auto;
+        @media screen and (max-width: 768px) {
+            margin-top: -10px;
+        }
     }
     .fa-caret-up {
         margin-top: -20px;
         display: none;
         margin-left: auto;
         margin-right: auto;
+        @media screen and (max-width: 768px) {
+            margin-top: -10px;
+        }
     }
     h4 {
         text-align: center;
         margin-top: -25px;
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            margin-top: -15px;
+            font-size: 10px;
+        }
     }
 }
 
@@ -281,8 +301,16 @@ nav {
         margin-left: 30%;
         padding-top: 5%;
         color: white;
+        .fir {
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
         .sec {
             padding-left: 250px;
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -426,7 +454,7 @@ nav {
     }
 }
 #seventh {
-    padding-top: 60px;
+    padding: 60px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -474,12 +502,12 @@ nav {
                         }
                     }
                     .nearby_content_right {
-                        border-left: #999999 15px solid;
-                        margin-left: -22.5px;
+                        border-left: #999999 10px solid;
+                        margin-left: -20px;
                     }
                     .nearby_content_left {
-                        border-right: #999999 15px solid;
-                        margin-right: -22.5px;
+                        border-right: #999999 10px solid;
+                        margin-right: -20px;
                     }
                 }
             }
@@ -495,7 +523,6 @@ nav {
         color: white;
     }
     .iframe_box {
-        padding: 20px;
         background-color: #000000;
     }
 }
@@ -540,22 +567,10 @@ footer {
     justify-content: center;
 }
 
+//mobile
 @media screen and (max-width: 768px) {
-    body {
-        padding-top: 82px;
-    }
     #book_online {
         display: none;
-    }
-    #back_to_top {
-        right: 10px;
-        bottom: 0px;
-        font-size: 10px;
-        h4 {
-            text-align: center;
-            margin-top: -15px;
-            font-size: 10px;
-        }
     }
     nav {
         background-color: rgba(0, 0, 0, 0.8);
@@ -579,6 +594,7 @@ footer {
         }
     }
     #first {
+        padding-top: 82px;
         .banner {
             height: 80vh;
             h1 {
@@ -727,6 +743,7 @@ footer {
         #section9 {
             background-image: none;
             padding-bottom: 40px;
+            margin-top: 40px;
 
             .word_box9_circle {
                 height: auto;

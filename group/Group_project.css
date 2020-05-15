@@ -1,47 +1,37 @@
 .block {
     animation: box1 5s;
     animation-fill-mode: forwards;
-  }
+}
 
-  @keyframes box1 {
-
+@keyframes box1 {
     0% {
-      opacity: 100%;
+        opacity: 100%;
     }
-    80%{
-      opacity: 100%;
+    80% {
+        opacity: 100%;
     }
     100% {
-      opacity: 0%;
+        opacity: 0%;
     }
+}
 
-  }
-
-  @keyframes box2 {
-
+@keyframes box2 {
     0% {
-      opacity: 0%;
+        opacity: 0%;
     }
 
     100% {
-      opacity: 100%;
+        opacity: 100%;
     }
+}
 
-  }
-
-  .none {
+.none {
     display: none !important;
-  }
+}
 
-
-  .content {
-    animation: box2 1s ;
-    
-  
-  }
-
-
-
+.content {
+    animation: box2 1s;
+}
 
 /* 自己手刻css */
 #section_B .text {
@@ -52,9 +42,7 @@
     font-weight: bold;
     letter-spacing: 6px;
 }
-#section_B .background .content_text {
-    width: 100%;
-}
+
 /* 背景顏色 */
 #section_B .background {
     max-width: 100%;
@@ -69,6 +57,10 @@
 }
 
 /* The One Villa */
+#section_B .background .content_text {
+    height: 100%;
+    position: relative;
+}
 #section_B .background .text_A {
     position: absolute;
     top: 40%;
@@ -216,7 +208,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    
+
     #section_B .background .text_B {
         font-size: 15px;
         width: auto;

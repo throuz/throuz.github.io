@@ -26,7 +26,8 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
             slidesPerView: 4,
             slidesPerColumn: 1,
         },
-    }
+    },
+    observer: true,
 });
 var galleryTop = new Swiper('.gallery-top', {
     navigation: {
@@ -40,5 +41,16 @@ var galleryTop = new Swiper('.gallery-top', {
         el: '.swiper-scrollbar',
         // hide: true,
     },
+    observer: true,
 });
 
+// start
+var block = document.querySelector(".block")
+var content = document.querySelector(".content")
+
+setTimeout(function () {
+    block.classList.add("none")
+    content.classList.remove("none")
+    // aos.js initial
+    AOS.init();
+}, 5000);
