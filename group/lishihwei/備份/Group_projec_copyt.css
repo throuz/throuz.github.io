@@ -1,0 +1,273 @@
+* 包棟房型 */
+ [class^="swiper-button-"],
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet::before {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+} 
+
+body {
+    height: 3500px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 28vw;
+    -webkit-transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease;
+    background-color: #000;
+}
+
+.swiper-container.swiper-container-coverflow {
+    padding: 2% 0 ;
+}
+
+.swiper-container.loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide .entity-img {
+    display: none;
+}
+
+.swiper-slide .content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 50%;
+    padding-left: 5%;
+    color: #fff;
+}
+
+.swiper-slide .content .title {
+    font-size: 2.6em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.swiper-slide .content .caption {
+    display: block;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+[class^="swiper-button-"] {
+    width: 44px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.swiper-button-prev {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+}
+
+ .swiper-button-next {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+}
+
+
+
+/* 輪播選項 */
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 9px;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 0.4;
+} 
+
+ .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 0px solid #fff;
+    border-radius: 50%;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:hover,
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 0.5;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+    border-width: 1px;
+}
+
+@media (max-width: 1180px) {
+    .swiper-slide .content .title {
+        font-size: 25px;
+    }
+
+    .swiper-slide .content .caption {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .swiper-container {
+        height: 40vw;
+    }
+
+    .swiper-container.swiper-container-coverflow {
+        padding-top: 0;
+    }
+} 
+
+
+
+
+/* 輪播點點往右5px */
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    margin-left: 5px;
+}
+
+
+
+/* 標題 */
+.big_title h3 {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top:30px ;
+    
+}
+/* 底線 */
+.container .nav .nav-item .nav-link hr {
+    border: 2px solid gray;
+    border-radius: 1px;
+    margin-top: 5px;
+}
+
+.container .nav .nav-item .nav-link {
+    text-align: center;
+}
+
+
+/* 輪播按鈕*/
+
+.button .swiper-pagination {
+    position: unset;
+    margin-left: 5px;
+    
+}
+/* 價格說明 注意事項 */
+#section_2 .price_considerations .nav .btn {
+    padding: 0 25px;
+}
+
+/* hr下底線 */
+#section_2 .price_considerations  hr {
+    margin-top: 5px;
+    border: 2px solid gray;
+    border-radius: 1px;
+}
+
+/* 房子特色文字置中 */
+#section_2 .House_features {
+    text-align: center;
+}
+
+/* 價格說明 注意事項 */
+#section_2 .price_considerations {
+    text-align: center;
+    
+}
+#section_2 .price_considerations .nav a{
+    padding: 0 25px;
+    margin: 0;
+    
+}
+
+/* pallarex */
+#section_3 .big_bg {
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed; 
+    position: relative; 
+}
+
+#section_3 .big_bg .texts {
+    color: white;
+    /* position: relative; */
+}
+
+#section_3 .big_bg .texts .text_A{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+
+}
+
+#section_3 .big_bg .texts .text_B{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+
+}
+
+
+
+
+
+/* 派對時刻標題 */
+#section_4 h3 {
+    text-align: center;
+    padding: 50px 0 ;
+}
+
+
+/* <!-- 派對時刻 --> */
+#section_5 .card-body {
+    padding: 0;   
+}
+
+
+/* 派對時刻 */
+#section_5 .row .col-xl-6 .card .big_bg img {
+    width: 100%;
+    
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
