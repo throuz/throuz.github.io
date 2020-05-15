@@ -1,0 +1,280 @@
+
+body {
+  height: 1500px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+  padding-top: 118px;
+}
+
+nav {
+  background-color: black;
+}
+
+/* The One logo */
+nav .navbar-brand {
+  margin-left: 6%;
+}
+
+nav .navbar-brand h1 {
+  font-family: "Dancing Script";
+  color: white;
+  font-size: 70px;
+  font-weight: 900;
+}
+
+nav .fa-phone-alt {
+  color: white;
+  display: none;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+
+nav #navbarSupportedContent ul li {
+  font-size: 25px;
+  padding: 0 20px;
+  list-style: none;
+  display: inline;
+}
+
+nav #navbarSupportedContent ul li a {
+  color: white;
+}
+
+
+
+
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scrolled .navbar-brand h1 {
+  color: white;
+}
+
+.scrolled #navbarSupportedContent ul li a {
+  color: white;
+}
+
+
+/* .swiperr */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.swiper-container {
+  width: 100%;
+  height: 28vw;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+  background-color: white;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-container.swiper-container-coverflow {
+  padding: 1% 0 ;
+}
+
+/* 輪播點點距離 */
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 20px;
+
+}
+
+/* 輪播選項 */
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 9px;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  opacity: 0.4;
+} 
+
+/* pagination輪播特效 */
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 0px solid #fff;
+  border-radius: 50%;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:hover,
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  border-width: 1px;
+}
+
+
+#swiper_banner .main .title_text h3 {
+  text-align: center;
+  margin: 0;
+  padding: 25px 0;
+}
+#swiper_banner .main .block .container .tab_btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#swiper_banner .main .block .container .tab_btns .tab_btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 15px;
+  padding: 5px 5px;
+  /* background-color: rgb(154, 185, 199); */
+  text-align: center;
+  /* font-size: 26px; */
+  color: rgb(2, 51, 73);
+
+}
+
+#swiper_banner .main .block .container {
+  max-width: 100%;
+  
+}
+
+
+
+
+
+
+/* 隱藏 */
+ .tab_content {
+  display: none;
+  margin:  0 auto;
+  background-color: white;
+  padding: 20px 0 ;
+
+}
+
+
+
+/* 點擊出現 */
+.tab_contents .tab_content.active {
+  display: block;
+  width: 100%;
+  max-height:60vh;
+
+}
+
+#section_A .container .row .item .houses h5 {
+  margin: 30px 0 ;
+}
+
+#section_A .container .row .item .price h5 {
+  margin: 30px 0 ;
+}
+
+
+/* section_B 注意事項 */
+#section_B .container .note .big_title h5 {
+  text-align: center;
+  margin: 30px 0;
+  
+}
+
+ #section_B .container .note .text_content {
+  margin-bottom: 30px;
+}
+
+
+
+
+ @media (max-width: 1125px){
+  nav #navbarSupportedContent ul li a {
+    font-size: 20px;
+    padding: 0 5px;
+ 
+}
+
+.swiper-container {
+  width: 100%;
+  height: 50vh;
+}
+
+
+}
+
+ @media (max-width: 768px){
+  #section_B .container .note .big_title h5 {
+    text-align: left;
+  }
+
+} 
+
+
+@media (max-width: 336px){
+  #swiper_banner {
+  margin: 20px -2px;
+  }
+#swiper_banner .main .block .container .row h5 {
+  font-size: 20px;
+}
+
+#section_B .container .note .big_title h5 {
+  text-align: left;
+}
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

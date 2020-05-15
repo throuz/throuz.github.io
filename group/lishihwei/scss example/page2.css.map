@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "page2.scss",
+        "_style-guild.scss"
+    ],
+    "names": [],
+    "file": "page2.css"
+}
