@@ -1,5 +1,4 @@
 body {
-  height: 1500px;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: #000;
@@ -41,6 +40,12 @@ nav #navbarSupportedContent ul li a {
   }
 }
 
+@media (max-width: 336px) {
+  #swiper_banner {
+    margin: 20px -2px;
+  }
+}
+
 #swiper_banner .main .title_text h3 {
   text-align: center;
   margin: 0;
@@ -49,6 +54,12 @@ nav #navbarSupportedContent ul li a {
 
 #swiper_banner .main .block .container {
   max-width: 100%;
+}
+
+@media (max-width: 336px) {
+  #swiper_banner .main .block .container .row h5 {
+    font-size: 20px;
+  }
 }
 
 #swiper_banner .main .block .container .tab_btns {
@@ -62,7 +73,7 @@ nav #navbarSupportedContent ul li a {
           justify-content: center;
 }
 
-#swiper_banner .main .block .container .tab_btn {
+#swiper_banner .main .block .container .tab_btns .tab_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,24 +88,22 @@ nav #navbarSupportedContent ul li a {
   color: #023349;
 }
 
-@media (max-width: 1125px) {
-  #swiper_banner .tab_contents .swiper-container {
-    width: 100%;
-    height: 50vh;
-  }
+#swiper_banner .main .tab_contents .tab_content.active {
+  display: block;
+  width: 100%;
+  max-height: 60vh;
 }
 
-#swiper_banner .tab_contents .tab_content {
+#swiper_banner .main .tab_contents .tab_content.active .swiper-container {
+  width: 100%;
+  height: 50vh;
+}
+
+#swiper_banner .main .tab_content {
   display: none;
   margin: 0 auto;
   background-color: white;
   padding: 20px 0;
-}
-
-#swiper_banner .tab_contents .tab_content.active {
-  display: block;
-  width: 100%;
-  max-height: 60vh;
 }
 
 #section_A .container .row .item .houses h5 {
@@ -106,7 +115,7 @@ nav #navbarSupportedContent ul li a {
 }
 
 #section_B .container .note .big_title h5 {
-  text-align: center;
+  text-align: left;
   margin: 30px 0;
 }
 
@@ -116,19 +125,30 @@ nav #navbarSupportedContent ul li a {
   }
 }
 
-#section_B .container .note .big_title .text_content {
-  margin-bottom: 30px;
-}
-
 @media (max-width: 336px) {
-  #swiper_banner {
-    margin: 20px -2px;
-  }
-  #swiper_banner .main .block .container .row h5 {
-    font-size: 20px;
-  }
   #section_B .container .note .big_title h5 {
     text-align: left;
   }
 }
-/*# sourceMappingURL=swiperscss.css.map */
+
+#section_B .container .text_content {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: black;
+}
+
+footer p {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=swiper_scss.css.map */
