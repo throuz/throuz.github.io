@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "微軟正黑體";
   font-size: 12px;
   color: #000;
   margin: 0;
@@ -9,7 +9,6 @@ body {
 
 nav {
   background-color: black;
-
   .navbar-brand {
     margin-left: 6%;
 
@@ -18,22 +17,44 @@ nav {
       color: white;
       font-size: 70px;
       font-weight: 900;
+      @media screen and (max-width: 768px) {
+        font-size: 40px;
+        color: white;
+      }
+    }
+  }
+
+  .fa-phone-alt {
+    @media screen and (max-width: 768px) {
+      color: white;
+      display: block;
+      margin-left: auto;
+      margin-right: 15px;
     }
   }
 
   #navbarSupportedContent {
     ul {
+      margin-right: 8%;
       li {
         font-size: 25px;
         padding: 0 20px;
         list-style: none;
         display: inline;
+        color: white;
+
+        @media (max-width: 1220px) {
+          font-size: 18px;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  #navbarSupportedContent {
+    ul {
+      li {
         a {
           color: white;
-          @media (max-width: 1125px) {
-            font-size: 20px;
-            padding: 0 5px;
-          }
         }
       }
     }
@@ -41,15 +62,25 @@ nav {
 }
 
 #swiper_banner {
+  padding:60px 0 ;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
   @media (max-width: 336px) {
     margin: 20px -2px;
   }
   .main {
     .title_text {
-      h3 {
+      // 包棟房型
+  
+      h2 {
         text-align: center;
         margin: 0;
-        padding: 25px 0;
+        margin-bottom: 30px;
+        font-weight: bold;
+        letter-spacing: 6px;
+        // padding: 25px 0;
       }
     }
     .block {
@@ -107,10 +138,21 @@ nav {
           h5 {
             margin: 30px 0;
           }
+          p {
+            font-size: 14px;
+            line-height: 35px;
+            letter-spacing: 1px;
+          }
         }
         .price {
           h5 {
             margin: 30px 0;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 35px;
+            letter-spacing: 1px;
           }
         }
       }
@@ -136,6 +178,11 @@ nav {
     }
     .text_content {
       margin-bottom: 30px;
+      p {
+        font-size: 14px;
+        line-height: 35px;
+        letter-spacing: 1px;
+      }
     }
   }
 }
@@ -143,11 +190,18 @@ nav {
 footer {
   background-color: black;
   p {
+    margin: 0;
     width: 100%;
     background-color: black;
     color: white;
     padding: 16px 0;
     display: flex;
     justify-content: center;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 10px;
   }
 }
