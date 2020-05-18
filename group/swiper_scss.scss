@@ -56,7 +56,6 @@ nav {
       li {
         a {
           color: white;
-          
         }
         .hvr-underline-from-left:before{
           background: #999999;
@@ -91,17 +90,17 @@ nav {
     .block {
       .container {
         max-width: 100%;
-       
         .tab_btns {
           .hvr-underline-from-center:before {
             background: gray;
           }
-          
           h5 {
             @media (max-width: 336px) {
               font-size: 20px;
             }
           }
+        }
+        .tab_btns {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;

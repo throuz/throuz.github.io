@@ -121,4 +121,67 @@ $(function () {
             distance = (elementOffset - scrollTop);
         $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
     });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(10)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(11)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(12)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(13)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(14)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(15)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(16)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(17)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(18)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
 });

@@ -66,7 +66,6 @@ nav #navbarSupportedContent ul li a {
 nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   background: #999999;
 }
-
 #swiper_banner {
   padding: 60px 0;
 }
@@ -95,6 +94,11 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   max-width: 100%;
 }
 
+@media (max-width: 336px) {
+  #swiper_banner .main .block .container .row h5 {
+    font-size: 20px;
+  }
+}
 #swiper_banner .main .block .container .tab_btns {
   display: -webkit-box;
   display: -ms-flexbox;
