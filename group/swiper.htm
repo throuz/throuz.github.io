@@ -18,23 +18,24 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <!-- Me CSS -->
-    <link rel="stylesheet" href="swiper_2.css">
-    <link rel="stylesheet" href="swiperscss.css">
-    
-    <title>swiper</title>
+    <link rel="stylesheet" href="swiper_kit.css">
+    <link rel="stylesheet" href="swiper_scss.css">
 
+    <title>swiper</title>
     <style>
     </style>
 
 </head>
 
 <body>
-    
 
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top ">
-        <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="./index_modify.html">
             <h1>The One</h1>
         </a>
+
+        <i class="fas fa-phone-alt fa-2x"></i>
+
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,53 +44,54 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="./swiper_test.html">About關於</a>
+                    <a class="nav-link hvr-underline-from-left" href="index_modify.html">About關於</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="#">包棟房型</a>
+                    <a class="nav-link hvr-underline-from-left" href="index_modify.html">包棟房型</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="#">派對時刻</a>
+                    <a class="nav-link hvr-underline-from-left" href="index_modify.html">派對時刻</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="#seventh_anchor">附近景點</a>
+                    <a class="nav-link hvr-underline-from-left" href="index_modify.html">附近景點</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="#eighth">訂房資訊</a>
+                    <a class="nav-link hvr-underline-from-left" href="index_modify.html">室內導覽</a>
                 </li>
-            </ul>
         </div>
     </nav>
+
+
 
 
 
     <section id="swiper_banner">
         <div class="main">
             <div class="title_text">
-                <h3>包棟房型</h3>
+                <h2>包棟房型</h2>
             </div>
             <div class="block ">
                 <div class="container">
-                    <div class="row tab_btns  mx-auto"> 
-                        <div class="tab_btn  hvr-underline-from-left  " data-btnid="1">
+                    <div class="row tab_btns  mx-auto ">
+                        <div class="tab_btn order-2 hvr-underline-from-center " data-btnid="1">
                             <h5>VIP頂級<br>360度景觀房</h5>
 
                         </div>
-                        <div class="tab_btn  hvr-underline-from-left " data-btnid="2">
+                        <div class="tab_btn hvr-underline-from-center" data-btnid="2">
                             <h5>奇幻設計房</h5>
 
                         </div>
-                        <div class="tab_btn  hvr-underline-from-left " data-btnid="3">
+                        <div class="tab_btn hvr-underline-from-center" data-btnid="3">
                             <h5>漂浮泳池房</h5>
 
                         </div>
-                        <div class="tab_btn  hvr-underline-from-left " data-btnid="4">
+                        <div class="tab_btn hvr-underline-from-center" data-btnid="4">
                             <h5>THE ONE <br>庭園景觀房</h5>
 
                         </div>
 
+                    </div>
                 </div>
-            </div>
 
                 <div class="tab_contents">
                     <!-- 360_Room_type(VIP頂級360度景觀房) -->
@@ -111,7 +113,7 @@
                             </div>
                             <!-- Add Arrows -->
                             <div class="swiper-button-next " style="color:white"></div>
-                            <div class="swiper-button-prev"style="color:white"></div>
+                            <div class="swiper-button-prev" style="color:white"></div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -158,8 +160,8 @@
                                 </div>
                             </div>
                             <!-- Add Arrows -->
-                            <div class="swiper-button-next"style="color:white"></div>
-                            <div class="swiper-button-prev"style="color:white"></div>
+                            <div class="swiper-button-next" style="color:white"></div>
+                            <div class="swiper-button-prev" style="color:white"></div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -180,10 +182,10 @@
                                 </div>
                             </div>
                             <!-- Add Arrows -->
-                            <div class="swiper-button-next"style="color:white"></div>
+                            <div class="swiper-button-next" style="color:white"></div>
                             <div class="swiper-button-prev"></div>
                             <!-- Add Pagination -->
-                            <div class="swiper-pagination"style="color:white"></div>
+                            <div class="swiper-pagination" style="color:white"></div>
                         </div>
                     </div>
                 </div>
@@ -200,15 +202,17 @@
                             <h5>房內設施</h5>
                         </div>
                         <div>
-                            *  室內頂級沙發 / 42 吋液晶電視及音響系統<br>
-                            *  連接藍芽隨身碟媒體系統<br>
-                            *  熱帶雨林淋浴 / 豪華浴缸<br>
-                            *  大金變頻冷暖氣 / 無線寬頻<br>
-                            *  隨房附贈美國進口瓶裝礦泉水<br>
-                            *  每房每人享有主廚早餐兩客，下午茶兩客<br>
-                            *  沐浴乳，洗髮精，護髮素，身體乳，香皂皆使用義大利ALLEGRINI<br>
-                            *  浴室暖房設備<br>
-                            *  義大利品牌進口磁磚<br>
+                            <p>
+                                * 室內頂級沙發 / 42 吋液晶電視及音響系統<br>
+                                * 連接藍芽隨身碟媒體系統<br>
+                                * 熱帶雨林淋浴 / 豪華浴缸<br>
+                                * 大金變頻冷暖氣 / 無線寬頻<br>
+                                * 隨房附贈美國進口瓶裝礦泉水<br>
+                                * 每房每人享有主廚早餐兩客，下午茶兩客<br>
+                                * 沐浴乳，洗髮精，護髮素，身體乳，香皂皆使用義大利ALLEGRINI<br>
+                                * 浴室暖房設備<br>
+                                * 義大利品牌進口磁磚<br>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -219,13 +223,15 @@
                             <h5>價格說明</h5>
                         </div>
                         <div>
-                            包棟價格 (包棟四間房10人) <br>
-                            <br>
-                            1. 平日周一~周四 36800 <br>
-                            2. 旺日七、八月暑假週日~周四 39800<br>
-                            3. 假日週五、週六、國定假日 42800<br>
-                            4. 定價跨年、春節除夕~初五 58800<br>
-                            5. 加人費用(含早餐、下午茶、備品、床位) 2000 / 人<br>
+                            <p>
+                                包棟價格 (包棟四間房10人) <br>
+                                <br>
+                                1. 平日周一~周四 36800 <br>
+                                2. 旺日七、八月暑假週日~周四 39800<br>
+                                3. 假日週五、週六、國定假日 42800<br>
+                                4. 定價跨年、春節除夕~初五 58800<br>
+                                5. 加人費用(含早餐、下午茶、備品、床位) 2000 / 人<br>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -240,20 +246,26 @@
                     <h5>注意事項</h5>
                 </div>
                 <div class="text_content">
-                    1. Check in：PM3:00以後（住房貴賓必須提供本人身分證，以便查和登記）；Check out：AM 11:00以前<br>
-                    2. 電話訂房時間：AM8:00~PM22:00<br>
-                    3. 我們有提供中西式早餐與下午茶及零食mini Bar，飲料汽水，可樂，義式咖啡。<br>
-                    4. 館內提供多項設施(電器設備及廚房設備皆由管家操作，不提供外借)。<br>
-                    5. 本館設有現場小管家於現場為貴賓服務.服務時間為下午15:00-16:00；早上8:00-11:00；電話小管家服務時間：早上11:00-晚上11:00。<br>
-                    6. 本會館提供瓦斯式烤肉爐，貴賓需烤肉BBQ時需預付清潔費6000元，如無毀損並自行清潔，本館於退房時將退回清潔費。<br>
-                    7. 本館設有戲水池及划船因無救生員，故未提供開放使用，住宿貴賓及訪客若自行使用而導致意外事故，責任概由住宿貴賓及訪客自行負責。<br>
+                    <p>
+                        1. Check in：PM3:00以後（住房貴賓必須提供本人身分證，以便查和登記）；Check out：AM 11:00以前<br>
+                        2. 電話訂房時間：AM8:00~PM22:00<br>
+                        3. 我們有提供中西式早餐與下午茶及零食mini Bar，飲料汽水，可樂，義式咖啡。<br>
+                        4. 館內提供多項設施(電器設備及廚房設備皆由管家操作，不提供外借)。<br>
+                        5. 本館設有現場小管家於現場為貴賓服務.服務時間為下午15:00-16:00；早上8:00-11:00；電話小管家服務時間：早上11:00-晚上11:00。<br>
+                        6. 本會館提供瓦斯式烤肉爐，貴賓需烤肉BBQ時需預付清潔費6000元，如無毀損並自行清潔，本館於退房時將退回清潔費。<br>
+                        7. 本館設有戲水池及划船因無救生員，故未提供開放使用，住宿貴賓及訪客若自行使用而導致意外事故，責任概由住宿貴賓及訪客自行負責。<br>
+                    </p>
                 </div>
             </div>
         </div>
 
     </section>
 
-   
+    <footer>
+        <p>Copyright © 2020 the The One Villa Reserved</p>
+    </footer>
+
+
 
 
 
@@ -323,8 +335,8 @@
             // responsive
             breakpoints: {
 
-               
-            //    responsive rwd
+
+                //    responsive rwd
                 992: {
                     slidesPerView: 2,
                     spaceBetween: 20,
