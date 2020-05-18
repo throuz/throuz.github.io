@@ -56,10 +56,13 @@ nav {
       li {
         a {
           color: white;
+<<<<<<< HEAD
           
         }
         .hvr-underline-from-left:before{
           background: #999999;
+=======
+>>>>>>> aad842fb8ac531ee5c5dd53108fef94d78e05fd7
         }
       }
     }
@@ -91,17 +94,26 @@ nav {
     .block {
       .container {
         max-width: 100%;
+<<<<<<< HEAD
        
         .tab_btns {
           .hvr-underline-from-center:before {
             background: gray;
           }
           
+=======
+        .row {
+>>>>>>> aad842fb8ac531ee5c5dd53108fef94d78e05fd7
           h5 {
             @media (max-width: 336px) {
               font-size: 20px;
             }
           }
+<<<<<<< HEAD
+=======
+        }
+        .tab_btns {
+>>>>>>> aad842fb8ac531ee5c5dd53108fef94d78e05fd7
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
