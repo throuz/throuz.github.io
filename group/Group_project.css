@@ -231,19 +231,6 @@
         display: none;
     }
 
-    /* change img */
-    .party_1 {
-        content: url(./party_time/5_100.jpg);
-    }
-    .party_2 {
-        content: url(./party_time/10_100.jpg);
-    }
-    .party_3 {
-        content: url(./party_time/9_100.jpg);
-    }
-    .party_4 {
-        content: url(./party_time/8_100.jpg);
-    }
 
     /* change_img opacity 1 */
     .tiler img {
