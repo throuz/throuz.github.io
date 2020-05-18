@@ -95,6 +95,12 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   max-width: 100%;
 }
 
+@media (max-width: 336px) {
+  #swiper_banner .main .block .container .row h5 {
+    font-size: 20px;
+  }
+}
+
 #swiper_banner .main .block .container .tab_btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,6 +111,7 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 
 #swiper_banner .main .block .container .tab_btns .hvr-underline-from-center:before {
   background: gray;
