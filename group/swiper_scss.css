@@ -63,10 +63,19 @@ nav #navbarSupportedContent ul li a {
   color: white;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 521fa2ff42b16eece9ffa994bd2ed7a4ffee6046
 nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   background: #999999;
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> aad842fb8ac531ee5c5dd53108fef94d78e05fd7
+>>>>>>> 521fa2ff42b16eece9ffa994bd2ed7a4ffee6046
 #swiper_banner {
   padding: 60px 0;
 }
@@ -95,12 +104,18 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   max-width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 @media (max-width: 336px) {
   #swiper_banner .main .block .container .row h5 {
     font-size: 20px;
   }
 }
 
+>>>>>>> aad842fb8ac531ee5c5dd53108fef94d78e05fd7
+>>>>>>> 521fa2ff42b16eece9ffa994bd2ed7a4ffee6046
 #swiper_banner .main .block .container .tab_btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,7 +127,10 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
           justify-content: center;
 }
 
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 521fa2ff42b16eece9ffa994bd2ed7a4ffee6046
 #swiper_banner .main .block .container .tab_btns .hvr-underline-from-center:before {
   background: gray;
 }
@@ -123,6 +141,11 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   }
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> aad842fb8ac531ee5c5dd53108fef94d78e05fd7
+>>>>>>> 521fa2ff42b16eece9ffa994bd2ed7a4ffee6046
 #swiper_banner .main .block .container .tab_btns .tab_btn {
   display: -webkit-box;
   display: -ms-flexbox;
