@@ -30,6 +30,7 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     observer: true,
 });
 var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 30,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -54,3 +55,70 @@ setTimeout(function () {
     // aos.js initial
     AOS.init();
 }, 5000);
+
+// footprint animation
+$(function () {
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(1)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(2)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(3)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(4)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(5)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(6)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(7)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(8)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+    $(document).scroll(function () {
+        var $footprint = $(".fa-shoe-prints:nth-child(9)");
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $footprint.offset().top,
+            distance = (elementOffset - scrollTop);
+        $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
+    });
+});

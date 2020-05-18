@@ -24,6 +24,9 @@
         opacity: 100%;
     }
 }
+body {
+    font-family: "微軟正黑體";
+}
 
 .none {
     display: none !important;
@@ -73,6 +76,10 @@
     top: 60%;
     left: 60%;
     transform: translate(-50%, -50%);
+}
+/* 隱藏 */
+#section_B .big_title .row .tiler  .text_C {
+    display: none;
 }
 
 /* 派對時刻 */
@@ -200,6 +207,9 @@
     opacity: 1;
 }
 
+
+
+
 @media (max-width: 768px) {
     #section_B .background .text_A {
         font-size: 20px;
@@ -220,7 +230,8 @@
 
     #section_B .text {
         font-size: 25px;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
+        padding-top: 30px;
     }
     #section_B .main {
         display: block;
@@ -231,22 +242,50 @@
         display: none;
     }
 
-    /* change img */
-    .party_1 {
-        content: url(./party_time/5_100.jpg);
+
+
+    
+    #section_B .party_1 {
+        position: relative;
     }
-    .party_2 {
-        content: url(./party_time/10_100.jpg);
-    }
-    .party_3 {
-        content: url(./party_time/9_100.jpg);
-    }
-    .party_4 {
-        content: url(./party_time/8_100.jpg);
+    #section_B .big_title .row .tiler  .text_C {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+        background-color: white;
+        padding: 10px 0;
+        position: absolute;
+        color: black;
+        top: 50%;
+        left:50%;
+        transform: translate(-50% , -50%);
+        opacity: 0.5;
+
+       
     }
 
-    /* change_img opacity 1 */
+    #section_B .big_title .row .tiler  .text_C h5 {
+        font-size: 10px;
+        font-weight: bold;
+
+    }
+    #section_B .big_title .row .tiler  .text_C p {
+        font-size: 2px;
+
+    }
+    /* 文字顯現 */
+    #section_B .row .tiler{
+        visibility: visible;
+    } 
+
+
     .tiler img {
+
         opacity: 1;
     }
 }
+
+ 
+
+
+
