@@ -121,6 +121,7 @@ $(function () {
             distance = (elementOffset - scrollTop);
         $footprint.toggleClass('footprint_scrolled', distance < window.innerHeight / 2);
     });
+    
     $(document).scroll(function () {
         var $footprint = $(".fa-shoe-prints:nth-child(10)");
         var scrollTop = $(window).scrollTop(),
