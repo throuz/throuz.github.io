@@ -6,6 +6,7 @@ $main-color: #000;
     margin-bottom: 30px;
     font-weight: bold;
     letter-spacing: 6px;
+    font-size: 35px;
     @media screen and (max-width: 768px) {
         font-size: 25px;
         margin-bottom: 15px;
@@ -36,6 +37,7 @@ nav {
             color: black;
             font-size: 70px;
             font-weight: 900;
+
         }
     }
     .fa-phone-alt {
@@ -63,6 +65,7 @@ nav {
                 }
                 a {
                     color: black;
+                    letter-spacing: 3px;
                 }
             }
             .hvr-underline-from-left:before {
@@ -122,6 +125,7 @@ nav {
         text-align: center;
         transition-duration: 0.5s;
         transition-timing-function: cubic-bezier(0.68, 0, 0.265, 1.55);
+    
     }
     #book_online_hover_in {
         opacity: 0;
@@ -239,6 +243,7 @@ nav {
     justify-content: space-between;
     position: relative;
     background-image: url(./svg1.svg);
+    
 
     .svg1 {
         position: absolute !important;
@@ -273,16 +278,26 @@ nav {
         margin: 0 20px;
         font-family: "微軟正黑體";
 
+
         .word2 {
             color: gray;
             z-index: 1;
 
             h3 {
                 text-align: center;
+                letter-spacing: 3px;
             }
 
             p {
                 text-align: center;
+                font-size: 18px;
+                letter-spacing: 3px;
+
+                @media screen and (max-width: 400px) {
+                 font-size: 15px;
+                 }
+                        
+                   
             }
 
             hr {
@@ -361,6 +376,8 @@ nav {
                     text-align: center;
                     margin: 0;
                     padding: 15px;
+                    letter-spacing: 3px;
+                    font-size: 21px;
                     @media screen and (max-width: 768px) {
                         font-size: 15px;
                         padding: 0px;
@@ -395,6 +412,8 @@ nav {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+                letter-spacing: 3px;
+                font-size: 18px;
                 @media screen and (max-width: 768px) {
                     width: 100%;
                     // height: 50%;
@@ -403,7 +422,7 @@ nav {
                     line-height: 40px;
                     @media screen and (max-width: 768px) {
                         line-height: 30px;
-                        font-size: 15px;
+                        font-size: 15px;   
                         height: 210px;
                     }
                 }
@@ -561,83 +580,132 @@ nav {
         font-size: 50px;
         opacity: 0.2;
         transition-duration: 0.5s;
+        @media screen and (max-width:768px){
+            opacity: 0.7;
+           
+        }
     }
     .fa-shoe-prints:nth-child(1) {
         top: 10%;
         left: 85%;
+        @media screen and (max-width:768px){
+            top: 10%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(2) {
         top: 20%;
         left: 85%;
+        @media screen and (max-width:768px){
+            top: 20%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(3) {
         top: 30%;
-        left: 85%;
+        left: 85%; @media screen and (max-width:768px){
+            top: 30%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(4) {
         top: 40%;
         left: 85%;
+        @media screen and (max-width:768px){
+            top: 40%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(5) {
         top: 50%;
         left: 85%;
+        @media screen and (max-width:768px){
+            top: 50%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(6) {
         top: 60%;
         left: 85%;
+        @media screen and (max-width:768px){
+            top: 60%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(7) {
         top: 70%;
         left: 85%;
+        @media screen and (max-width:768px){
+            top: 70%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(8) {
         top: 80%;
         left: 85%;
+        @media screen and (max-width:768px){
+            top: 80%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(9) {
         top: 90%;
         left: 85%;
+        @media screen and (max-width:768px){
+            top: 90%;
+            left: 40%;}
     }
     .fa-shoe-prints:nth-child(10) {
         top: 10%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints:nth-child(11) {
         top: 20%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints:nth-child(12) {
         top: 30%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints:nth-child(13) {
         top: 40%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints:nth-child(14) {
         top: 50%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints:nth-child(15) {
         top: 60%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints:nth-child(16) {
         top: 70%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints:nth-child(17) {
         top: 80%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints:nth-child(18) {
         top: 90%;
         left: 10%;
+        @media screen and (max-width:768px){
+            display: none;}
     }
     .fa-shoe-prints.footprint_scrolled {
         opacity: 1;
         @media screen and (max-width:768px){
-            opacity: 0.3;
+            opacity: 0.1;
+           
         }
     }
     .content {
@@ -665,9 +733,18 @@ nav {
                             @include subtitle;
                             text-align: center;
                             margin-bottom: 30px;
+                            font-weight: bold;
+                            letter-spacing: 3px;
+                            font-size: 23px;
                         }
                         p {
                             padding: 0 30px;
+                            font-size: 18px;
+                            letter-spacing: 3px;
+                            text-align: justify;
+                            @media screen and (max-width:375px){
+                                font-size: 18px;
+                            }
                         }
                         a {
                             font-size: 25px;
@@ -675,6 +752,10 @@ nav {
                             right: 30px;
                             bottom: 0;
                             text-decoration: none;
+                            color: #3a3939;
+                            @media screen and (max-width:375px){
+                                
+                            }
                         }
                         .hvr-underline-from-left:before {
                             background-color: #999999;
@@ -703,6 +784,7 @@ nav {
     h2 {
         @include title;
         color: white;
+        margin-bottom: 50px;
     }
     .iframe_box {
         background-color: #000000;
@@ -735,7 +817,18 @@ nav {
         .words9 {
             margin-top: -50px;
             text-align: center;
+            a{
+                text-decoration: none;
+                color:white;
+                @media screen and (max-width: 768px) {
+                    color:black;}
+              &:hover{
+                  color: rgb(134, 131, 131);
+                  
+              }
+            }
         }
+       
     }
 }
 
@@ -933,19 +1026,19 @@ footer {
                 }
             }
         }
-        footer {
-            font-size: 15px;
-        }
+       
     }
 
     @media screen and (max-width: 400px) {
-        #section2 {
-            .word_box2 {
-                .word2 {
-                    font-size: 10px;
-                }
-            }
-        }
+        // #section2 {
+        //     .word_box2 {
+        //         width: 80%;
+        //         .word2 {
+                   
+        //             font-size: 10px;
+        //         }
+        //     }
+        // }
 
         #section9 {
             .word_box9_circle {

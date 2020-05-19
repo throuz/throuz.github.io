@@ -9,7 +9,7 @@ body {
 
 nav {
   background-color: black;
-  opacity:0.7;
+  opacity:0.8;
   .navbar-brand {
     margin-left: 6%;
 
@@ -55,6 +55,7 @@ nav {
     ul {
       li {
         a {
+          letter-spacing: 2px;
           color: white;
         }
         .hvr-underline-from-left:before{
@@ -85,6 +86,8 @@ nav {
         font-weight: bold;
         letter-spacing: 6px;
         // padding: 25px 0;
+        font-size: 35px;
+        letter-spacing: 6px;
       }
     }
     .block {
@@ -95,8 +98,12 @@ nav {
             background: gray;
           }
           h5 {
-            @media (max-width: 336px) {
-              font-size: 20px;
+            font-size: 21px;
+            letter-spacing: 3px;
+            color: #999999;
+            
+            @media (max-width: 375px) {
+              font-size: 18px;
             }
           }
         }
@@ -143,23 +150,29 @@ nav {
       .item {
         .houses {
           h5 {
+            font-size: 21px;
             margin: 30px 0;
+            font-weight: bold;
+            letter-spacing: 3px;
           }
           p {
-            font-size: 14px;
+            font-size: 18px;
             line-height: 35px;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
           }
         }
         .price {
           h5 {
+            font-size: 21px;
             margin: 30px 0;
+            font-weight: bold;
+            letter-spacing: 3px;
           }
 
           p {
-            font-size: 14px;
+            font-size: 18px;
             line-height: 35px;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
           }
         }
       }
@@ -174,6 +187,9 @@ nav {
         h5 {
           text-align: left;
           margin: 30px 0;
+          font-size: 21px;
+          letter-spacing: 3px;
+          font-weight: bold;
           @media (max-width: 768px) {
             text-align: left;
           }
@@ -186,10 +202,11 @@ nav {
     }
     .text_content {
       margin-bottom: 30px;
+      
       p {
-        font-size: 14px;
+        font-size: 18px;
         line-height: 35px;
-        letter-spacing: 1px;
+        letter-spacing: 3px;
       }
     }
   }
@@ -198,6 +215,7 @@ nav {
 footer {
   background-color: black;
   p {
+    font-size: 16px;
     margin: 0;
     width: 100%;
     background-color: black;

@@ -10,7 +10,7 @@ body {
 
 nav {
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 nav .navbar-brand {
@@ -60,12 +60,14 @@ nav #navbarSupportedContent ul li {
 }
 
 nav #navbarSupportedContent ul li a {
+  letter-spacing: 2px;
   color: white;
 }
 
 nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   background: #999999;
 }
+
 #swiper_banner {
   padding: 60px 0;
 }
@@ -88,17 +90,30 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   margin-bottom: 30px;
   font-weight: bold;
   letter-spacing: 6px;
+  font-size: 35px;
+  letter-spacing: 6px;
 }
 
 #swiper_banner .main .block .container {
   max-width: 100%;
 }
 
-@media (max-width: 336px) {
-  #swiper_banner .main .block .container .row h5 {
-    font-size: 20px;
+#swiper_banner .main .block .container .tab_btns .hvr-underline-from-center:before {
+  background: gray;
+}
+
+#swiper_banner .main .block .container .tab_btns h5 {
+  font-size: 21px;
+  letter-spacing: 3px;
+  color: #999999;
+}
+
+@media (max-width: 375px) {
+  #swiper_banner .main .block .container .tab_btns h5 {
+    font-size: 18px;
   }
 }
+
 #swiper_banner .main .block .container .tab_btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,16 +123,6 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#swiper_banner .main .block .container .tab_btns .hvr-underline-from-center:before {
-  background: gray;
-}
-
-@media (max-width: 336px) {
-  #swiper_banner .main .block .container .tab_btns h5 {
-    font-size: 20px;
-  }
 }
 
 #swiper_banner .main .block .container .tab_btns .tab_btn {
@@ -154,28 +159,37 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
 }
 
 #section_A .container .row .item .houses h5 {
+  font-size: 21px;
   margin: 30px 0;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 #section_A .container .row .item .houses p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 35px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 #section_A .container .row .item .price h5 {
+  font-size: 21px;
   margin: 30px 0;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 #section_A .container .row .item .price p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 35px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 #section_B .container .note .big_title h5 {
   text-align: left;
   margin: 30px 0;
+  font-size: 21px;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -195,9 +209,9 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
 }
 
 #section_B .container .text_content p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 35px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 footer {
@@ -205,6 +219,7 @@ footer {
 }
 
 footer p {
+  font-size: 16px;
   margin: 0;
   width: 100%;
   background-color: black;

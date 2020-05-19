@@ -54,7 +54,7 @@ setTimeout(function () {
     content.classList.remove("none")
     // aos.js initial
     AOS.init();
-}, 5000);
+}, 0);
 
 // footprint animation
 $(function () {
