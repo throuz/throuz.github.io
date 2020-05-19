@@ -81,7 +81,6 @@ body {
 /* 隱藏 */
 #section_B .big_title .row .tiler .text_C {
     display: none;
-    overflow: hidden;
 }
 
 /* 派對時刻 */
@@ -265,6 +264,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        overflow: hidden;
     }
 
     #section_B .big_title .row .tiler .text_C h5 {
