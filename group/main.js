@@ -45,16 +45,35 @@ var galleryTop = new Swiper('.gallery-top', {
     observer: true,
 });
 
-// start
-var block = document.querySelector(".block")
-var content = document.querySelector(".content")
 
-setTimeout(function () {
-    block.classList.add("none")
-    content.classList.remove("none")
-    // aos.js initial
-    AOS.init();
-}, 0);
+
+$(function () {
+    // start
+    var block = document.querySelector(".block")
+    var content = document.querySelector(".content")
+    var hash = window.location.hash;
+    
+    console.log(hash);
+
+    setTimeout(function () {
+        block.classList.add("none")
+        content.classList.remove("none")
+        // aos.js initial
+        AOS.init();
+        jump(hash)
+    }, 1500);
+
+});
+
+
+
+function jump(h) {
+    if(h){
+        var top = document.querySelector(h).offsetTop;
+        console.log(top);
+        window.scrollTo(0, top);
+    }
+}
 
 // footprint animation
 $(function () {

@@ -1,5 +1,5 @@
 .block {
-    animation: box1 5s;
+    animation: box1 2s;
     animation-fill-mode: forwards;
 }
 
@@ -81,6 +81,7 @@ body {
 /* 隱藏 */
 #section_B .big_title .row .tiler  .text_C {
     display: none;
+
 }
 
 /* 派對時刻 */
@@ -110,7 +111,7 @@ body {
     margin: auto;
     max-width: 100%;
     visibility: visible;
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 /* party_time 套件css */
