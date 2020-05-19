@@ -1,5 +1,5 @@
 .block {
-    animation: box1 5s;
+    animation: box1 2s;
     animation-fill-mode: forwards;
 }
 
@@ -80,6 +80,7 @@ body {
 /* 隱藏 */
 #section_B .big_title .row .tiler  .text_C {
     display: none;
+
 }
 
 /* 派對時刻 */
@@ -109,7 +110,7 @@ body {
     margin: auto;
     max-width: 100%;
     visibility: visible;
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 /* party_time 套件css */
@@ -250,27 +251,39 @@ body {
     }
     #section_B .big_title .row .tiler  .text_C {
         display: block;
-        max-width: 100%;
+        width: 70%;
+        height: 80%;
         text-align: center;
-        background-color: white;
-        padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.623);
+        padding: 10px 3px;
         position: absolute;
         color: black;
         top: 50%;
         left:50%;
         transform: translate(-50% , -50%);
-        opacity: 0.5;
+        
 
        
     }
 
     #section_B .big_title .row .tiler  .text_C h5 {
-        font-size: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
         font-weight: bold;
+        margin: 10px 0;
+        text-justify: auto;
+        
+
+
 
     }
     #section_B .big_title .row .tiler  .text_C p {
-        font-size: 2px;
+        font-size:12px;
+        letter-spacing: 1px;
+        margin: 0;
+        text-justify: auto;
+
+
 
     }
     /* 文字顯現 */

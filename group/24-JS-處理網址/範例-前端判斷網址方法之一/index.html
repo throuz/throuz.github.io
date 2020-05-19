@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主頁</title>
+</head>
+<body>
+    
+    <a href="./page_2.html">GO TO PAGE2</a>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script>
+        page_url = $(location).attr('href').split('?')
+        //透過JQ的attr函式取得網址,用split函式將網址按照'?'去切割成陣列,取得傳來的參數
+
+        console.log($(location).attr('href')) //取得網址
+
+        console.log(page_url) //將網址分割成陣列
+
+        if( page_url[page_url.length-1] == 'goback'){
+            alert('我從分頁回來!!不執行動畫')
+        }else{
+            alert('我從外部進來首頁!執行動畫')
+        }
+        //運用陣列的'length-1'取得參數,來判斷是否從分頁回來
+
+        // 參考說明 
+        // 切割陣列: https://www.wibibi.com/info.php?tid=258
+        // 取得網址: https://stackoverflow.com/questions/406192/get-current-url-with-jquery?page=1&tab=votes#tab-top
+        // 解析網址、改變網址: https://pjchender.blogspot.com/2018/08/js-javascript-url-parameters.html
+    </script>
+</body>
+</html>

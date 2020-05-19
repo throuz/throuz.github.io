@@ -66,6 +66,7 @@ nav #navbarSupportedContent ul li a {
 nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   background: #999999;
 }
+
 #swiper_banner {
   padding: 60px 0;
 }
@@ -94,11 +95,16 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   max-width: 100%;
 }
 
+#swiper_banner .main .block .container .tab_btns .hvr-underline-from-center:before {
+  background: gray;
+}
+
 @media (max-width: 336px) {
-  #swiper_banner .main .block .container .row h5 {
+  #swiper_banner .main .block .container .tab_btns h5 {
     font-size: 20px;
   }
 }
+
 #swiper_banner .main .block .container .tab_btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,16 +114,6 @@ nav #navbarSupportedContent ul li .hvr-underline-from-left:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#swiper_banner .main .block .container .tab_btns .hvr-underline-from-center:before {
-  background: gray;
-}
-
-@media (max-width: 336px) {
-  #swiper_banner .main .block .container .tab_btns h5 {
-    font-size: 20px;
-  }
 }
 
 #swiper_banner .main .block .container .tab_btns .tab_btn {
