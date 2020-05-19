@@ -24,11 +24,14 @@ nav .navbar-brand h1 {
   font-weight: 900;
 }
 
+nav #tel {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
 nav .fa-phone-alt {
   color: white;
   display: none;
-  margin-left: auto;
-  margin-right: 15px;
 }
 
 nav button:focus {

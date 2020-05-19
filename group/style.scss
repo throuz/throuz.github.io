@@ -37,14 +37,15 @@ nav {
             color: black;
             font-size: 70px;
             font-weight: 900;
-
         }
+    }
+    #tel {
+        margin-left: auto;
+        margin-right: 15px;
     }
     .fa-phone-alt {
         color: white;
         display: none;
-        margin-left: auto;
-        margin-right: 15px;
     }
     button:focus {
         outline: 5px auto #ffffff;

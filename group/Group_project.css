@@ -79,9 +79,9 @@ body {
     transform: translate(-50%, -50%);
 }
 /* 隱藏 */
-#section_B .big_title .row .tiler  .text_C {
+#section_B .big_title .row .tiler .text_C {
     display: none;
-
+    overflow: hidden;
 }
 
 /* 派對時刻 */
@@ -101,13 +101,10 @@ body {
 }
 #section_B .row .tiler img {
     opacity: 0.5;
-    
 }
-#section_B .row .tiler img:hover{
+#section_B .row .tiler img:hover {
     opacity: 1;
-
 }
-
 
 @media (max-width: 768px) {
     #section_B .row .tiler {
@@ -124,7 +121,6 @@ body {
 }
 #section_B .row .tiler img {
     opacity: 1;
-    
 }
 
 /* party_time 套件css */
@@ -222,9 +218,6 @@ body {
     opacity: 1;
 }
 
-
-
-
 @media (max-width: 768px) {
     #section_B .background .text_A {
         font-size: 20px;
@@ -257,13 +250,10 @@ body {
         display: none;
     }
 
-
-
-    
     #section_B .party_1 {
         position: relative;
     }
-    #section_B .big_title .row .tiler  .text_C {
+    #section_B .big_title .row .tiler .text_C {
         display: block;
         width: 70%;
         height: 80%;
@@ -273,46 +263,29 @@ body {
         position: absolute;
         color: black;
         top: 50%;
-        left:50%;
-        transform: translate(-50% , -50%);
-        
-
-       
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    #section_B .big_title .row .tiler  .text_C h5 {
+    #section_B .big_title .row .tiler .text_C h5 {
         font-size: 16px;
         letter-spacing: 1px;
         font-weight: bold;
         margin: 10px 0;
         text-justify: auto;
-        
-
-
-
     }
-    #section_B .big_title .row .tiler  .text_C p {
-        font-size:12px;
+    #section_B .big_title .row .tiler .text_C p {
+        font-size: 12px;
         letter-spacing: 1px;
         margin: 0;
         text-justify: auto;
-
-
-
     }
     /* 文字顯現 */
-    #section_B .row .tiler{
+    #section_B .row .tiler {
         visibility: visible;
-    } 
-
+    }
 
     .tiler img {
-
         opacity: 1;
     }
 }
-
- 
-
-
-
