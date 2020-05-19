@@ -99,7 +99,7 @@ body {
     margin: auto;
 }
 #section_B .row .tiler img {
-    opacity: 0.5;
+    opacity: 0.5; 
 }
 #section_B .row .tiler img:hover {
     opacity: 1;
@@ -108,6 +108,9 @@ body {
 @media (max-width: 768px) {
     #section_B .row .tiler {
         width: 100%;
+    }
+    #section_B .row .tiler img {
+        opacity: 1;
     }
 }
 
@@ -118,9 +121,7 @@ body {
     visibility: visible;
     opacity: 1;
 }
-#section_B .row .tiler img {
-    opacity: 1;
-}
+
 
 /* party_time 套件css */
 .splitting-image {
@@ -207,13 +208,10 @@ body {
     z-index: 2;
 }
 
+
 .tiler:hover .split-cell {
     -webkit-transform: scale(1);
     transform: scale(1);
-    opacity: 1;
-}
-
-.tiler img:hover {
     opacity: 1;
 }
 
