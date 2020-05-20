@@ -210,16 +210,30 @@ nav {
     }
     .banner {
         height: 100vh;
-        background-image: url("./img/banner.jpg");
+        width: 100%;
+        // background-image: url("./img/banner.jpg");
         background-position: top;
         background-size: cover;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
+        
+        overflow: hidden;
+
         @media screen and (max-width: 768px) {
-            height: 90vh;
+            height: calc(50vh - 82px);
         }
+
+        video{
+            // max-width: 100vw;
+            height: fit-content;
+
+            @media screen and (max-width: 768px) {
+                height: calc(50vh - 82px);
+            }
+    
+        }
+
+
         h1 {
             font-family: "Dancing Script", cursive;
             color: black;
