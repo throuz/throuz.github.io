@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap");
 body {
   font-family: "微軟正黑體";
   font-size: 12px;
@@ -243,5 +244,108 @@ footer p {
   footer {
     font-size: 10px;
   }
+}
+
+/* 鼠標 */
+/* mirar si es valido para IE */
+body {
+  cursor: none;
+}
+
+@-webkit-keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+
+.icon {
+  -webkit-animation: jelly 0.5s infinite;
+          animation: jelly 0.5s infinite;
+}
+
+@-webkit-keyframes jelly {
+  0%,
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+}
+
+.cursor-inner {
+  z-index: 9999;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+
+.cursor-inner--dot {
+  width: 8px;
+  height: 8px;
+  background-color: #b4a05b;
+}
+
+.cursor-inner--circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #b4a05b;
+}
+
+/* .cursor-inner--circle {
+	width: 8px;
+	height: 8px;
+    background-color: rgba(180, 160, 91,0.4);
+    mix-blend-mode: difference;
+} */
+@media screen and (max-width: 53em) {
+  .cursor {
+    visibility: hidden;
+  }
+}
+
+a {
+  cursor: none;
 }
 /*# sourceMappingURL=swiper_scss.css.map */
