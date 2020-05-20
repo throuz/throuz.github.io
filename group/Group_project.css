@@ -93,7 +93,7 @@ body {
 #section_B .row .tiler {
     position: relative;
     /* display: inline-block; */
-    cursor: pointer;
+    /* cursor: pointer; */
     visibility: hidden;
     width: 50%;
     margin: auto;
@@ -354,4 +354,8 @@ body {
     .cursor {
         visibility: hidden;
     }
+}
+
+a {
+    cursor: none;
 }
