@@ -250,8 +250,9 @@ nav #navbarSupportedContent ul .hvr-underline-from-left:before {
 }
 
 #first .banner {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
   background-position: top;
   background-size: cover;
   display: -webkit-box;
@@ -260,19 +261,21 @@ nav #navbarSupportedContent ul .hvr-underline-from-left:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
   #first .banner {
-    height: calc(50vh - 82px);
+    height: calc(100vh - 82px);
   }
 }
 
 #first .banner video {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
+  width: auto;
 }
 
 @media screen and (max-width: 768px) {
