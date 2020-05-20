@@ -210,20 +210,64 @@ $(function () {
 {
     // Some help functions.
     const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+    // 獲取鼠標位置
     const getMousePos = (e) => {
-        let posx = 0;
-        let posy = 0;
-        if (!e) e = window.event;
+        // let posx = 0;
+        // let posy = 0;
+        // if (!e) e = window.event;
+        // if (e.pageX || e.pageY) {
+        //     posx = e.pageX;
+        //     posy = e.pageY;
+        // }
+        // else if (e.clientX || e.clientY) {
+        //     posx = e.clientX + body.scrollLeft + document.documentElement.scrollLeft;
+        //     posy = e.clientY + body.scrollTop + document.documentElement.scrollTop;
+        // }
+
+        // console.log(posx,posy);
+        // return { x: posx, y: posy }
+
+
+        // 測試
+        var posx = 0;
+        var posy = 0;
+        if (!e) var e = window.event;
         if (e.pageX || e.pageY) {
-            posx = e.pageX;
-            posy = e.pageY;
+            posx = e.pageX - document.documentElement.scrollLeft - document.body.scrollLeft;
+            posy = e.pageY - document.documentElement.scrollTop - document.body.scrollTop;
         }
-        else if (e.clientX || e.clientY) {
-            posx = e.clientX + body.scrollLeft + document.documentElement.scrollLeft;
-            posy = e.clientY + body.scrollTop + document.documentElement.scrollTop;
+        else if (e.clientX || e.clientY) {//for fucking IE
+            posx = e.clientX;//+ document.body.scrollLeft+ document.documentElement.scrollLeft;
+            posy = e.clientY;//+ document.body.scrollTop + document.documentElement.scrollTop;
+
+            //如果想取得目前的捲動值 就把後面的註解拿掉
         }
-        return { x: posx, y: posy }
+
+        return { x: posx, y: posy };//posx posy就是游標的X,Y值了
     }
+
+    // 測試
+    // function getMousePos(event) {
+    //     var e = event || window.event;
+    //     var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+    //     var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+    //     var x = e.pageX || e.clientX + scrollX;
+    //     var y = e.pageY || e.clientY + scrollY;
+    //     //alert('x: ' + x + '\ny: ' + y);
+    //     return { 'x': x, 'y': y };
+    // }
+
+    // 測試
+    // function getMousePos(ev) {
+    //     if (ev.pageX || ev.pageY) {
+    //         return { x: ev.pageX, y: ev.pageY };
+    //     }
+    //     return {
+    //         x: ev.clientX   document.body.scrollLeft - document.body.clientLeft,
+    //         y: ev.clientY   document.body.scrollTop - document.body.clientTop
+    //     };
+    // }
 
     // Custom mouse cursor.
     class CursorFx {
@@ -239,11 +283,33 @@ $(function () {
             this.lastScale = 1;
             this.lastOpacity = 1;
 
+            // setInterval(ev => this.mousePos = getMousePos(ev), 1000);
+
             this.initEvents();
             requestAnimationFrame(() => this.render());
         }
+        // 監聽滑鼠移動，獲取鼠標位置
         initEvents() {
             window.addEventListener('mousemove', ev => this.mousePos = getMousePos(ev));
+
+
+            // window.addEventListener('mouseover', ev => this.mousePos = getMousePos(ev));
+            // document.addEventListener('mousemove', ev => this.mousePos = getMousePos(ev));
+            // document.addEventListener('mouseover', ev => this.mousePos = getMousePos(ev));
+
+            // let test = querySelector('.content')
+            // test.addEventListener('mousemove', ev => this.mousePos = getMousePos(ev));
+
+            // $(function () {
+            //     setInterval(oneSecondFunction, 1000);
+            // });
+
+            // function oneSecondFunction() {
+            //     // stuff you want to do every second
+            //     ev => this.mousePos = getMousePos(ev)
+            // }
+
+            // setInterval(ev => this.mousePos = getMousePos(ev), 1000);
         }
         render() {
             this.lastMousePos.dot.x = lerp(this.lastMousePos.dot.x, this.mousePos.x - this.bounds.dot.width / 2, 1);
@@ -269,6 +335,8 @@ $(function () {
         }
     }
 
+
+
     const cursor = new CursorFx(document.querySelector('.cursor'));
 
     // Custom cursor changes state when hovering on elements with 'data-hover'.
@@ -276,6 +344,11 @@ $(function () {
         link.addEventListener('mouseenter', () => cursor.enter());
         link.addEventListener('mouseleave', () => cursor.leave());
         link.addEventListener('click', () => cursor.click());
+    });
+
+    window.addEventListener('wheel', ev => {
+        this.mousePos = getMousePos(ev)
+
     });
 
 }
