@@ -93,13 +93,13 @@ body {
 #section_B .row .tiler {
     position: relative;
     /* display: inline-block; */
-    cursor: pointer;
+    /* cursor: pointer; */
     visibility: hidden;
     width: 50%;
     margin: auto;
 }
 #section_B .row .tiler img {
-    opacity: 0.5; 
+    opacity: 0.5;
 }
 #section_B .row .tiler img:hover {
     opacity: 1;
@@ -121,7 +121,6 @@ body {
     visibility: visible;
     opacity: 1;
 }
-
 
 /* party_time 套件css */
 .splitting-image {
@@ -208,7 +207,6 @@ body {
     z-index: 2;
 }
 
-
 .tiler:hover .split-cell {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -286,4 +284,78 @@ body {
     .tiler img {
         opacity: 1;
     }
+}
+
+/* 鼠標 */
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap");
+
+/* mirar si es valido para IE */
+body {
+    cursor: none;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin-bottom: 0;
+    }
+}
+
+.icon {
+    animation: jelly 0.5s infinite;
+}
+
+@keyframes jelly {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+.cursor-inner {
+    z-index: 9999;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+}
+
+.cursor-inner--dot {
+    width: 8px;
+    height: 8px;
+    background-color: #b4a05b;
+}
+
+.cursor-inner--circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b4a05b;
+}
+
+/* .cursor-inner--circle {
+	width: 8px;
+	height: 8px;
+    background-color: rgba(180, 160, 91,0.4);
+    mix-blend-mode: difference;
+} */
+
+@media screen and (max-width: 53em) {
+    .cursor {
+        visibility: hidden;
+    }
+}
+
+a {
+    cursor: none;
 }

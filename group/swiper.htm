@@ -30,7 +30,7 @@
 <body>
 
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="./index.html">
+        <a class="navbar-brand" href="./index.html" data-hover>
             <h1>The One</h1>
         </a>
 
@@ -44,19 +44,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="index.html">About關於</a>
+                    <a class="nav-link hvr-underline-from-left" href="index.html" data-hover>About關於</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="index.html">包棟房型</a>
+                    <a class="nav-link hvr-underline-from-left" href="index.html" data-hover>包棟房型</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="index.html">派對時刻</a>
+                    <a class="nav-link hvr-underline-from-left" href="index.html" data-hover>派對時刻</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="index.html">附近景點</a>
+                    <a class="nav-link hvr-underline-from-left" href="index.html" data-hover>附近景點</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="index.html">室內導覽</a>
+                    <a class="nav-link hvr-underline-from-left" href="index.html" data-hover>室內導覽</a>
                 </li>
         </div>
     </nav>
@@ -73,19 +73,19 @@
             <div class="block ">
                 <div class="container">
                     <div class="row tab_btns  mx-auto ">
-                        <div class="tab_btn order-2 hvr-underline-from-center " data-btnid="1">
+                        <div class="tab_btn order-2 hvr-underline-from-center " data-btnid="1" data-hover>
                             <h5>VIP頂級<br>360度景觀房</h5>
 
                         </div>
-                        <div class="tab_btn hvr-underline-from-center" data-btnid="2">
+                        <div class="tab_btn hvr-underline-from-center" data-btnid="2" data-hover>
                             <h5>奇幻設計房</h5>
 
                         </div>
-                        <div class="tab_btn hvr-underline-from-center" data-btnid="3">
+                        <div class="tab_btn hvr-underline-from-center" data-btnid="3" data-hover>
                             <h5>漂浮泳池房</h5>
 
                         </div>
-                        <div class="tab_btn hvr-underline-from-center" data-btnid="4">
+                        <div class="tab_btn hvr-underline-from-center" data-btnid="4" data-hover>
                             <h5>THE ONE <br>庭園景觀房</h5>
 
                         </div>
@@ -97,11 +97,11 @@
                     <!-- 360_Room_type(VIP頂級360度景觀房) -->
                     <div class="tab_content active">
                         <div class="swiper-container tab_1_swiper">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper" data-hover>
                                 <div class="swiper-slide">
                                     <img src="./360_Room_type/1.jpg" alt="" style="width: 100%;">
                                 </div>
-                                <div class="swiper-slide" >
+                                <div class="swiper-slide">
                                     <img src="./360_Room_type/03.jpg" alt="" style="width: 100%;">
                                 </div>
                                 <div class="swiper-slide">
@@ -129,7 +129,7 @@
                     <!-- Fantasy_Room_Type 奇幻設計房 -->
                     <div class="tab_content ">
                         <div class="swiper-container tab_2_swiper">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper" data-hover>
                                 <div class="swiper-slide ">
                                     <img src="./Fantasy_Room_Type/01.jpg" alt="" style="width: 100%;">
                                 </div>
@@ -156,7 +156,7 @@
                     <!-- Floating_pool 漂浮泳池房 -->
                     <div class="tab_content ">
                         <div class="swiper-container tab_2_swiper">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper" data-hover>
                                 <div class="swiper-slide">
                                     <img src="./Floating_pool/01.jpg" alt="" style="width: 100%;">
 
@@ -174,7 +174,7 @@
                                 <div class="swiper-slide">
                                     <img src="./Floating_pool/05.jpg" alt="" style="width: 100%;">
                                 </div>
-                                <div class="swiper-slide" >
+                                <div class="swiper-slide">
                                     <img src="./Floating_pool/06.jpg" alt="" style="width: 100%;">
                                 </div>
                             </div>
@@ -188,7 +188,7 @@
                     <!-- THR ONE庭園景觀房 -->
                     <div class="tab_content ">
                         <div class="swiper-container tab_2_swiper">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper" data-hover>
                                 <div class="swiper-slide">
                                     <img src="./THE_ONE/01.jpg" alt="" style="width: 100%;">
                                 </div>
@@ -206,8 +206,8 @@
                                 </div>
                             </div>
                             <!-- Add Arrows -->
-                            <div class="swiper-button-next" style="color:white"></div>
-                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next" style="color:white" data-hover></div>
+                            <div class="swiper-button-prev" data-hover></div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination" style="color:white"></div>
                         </div>
@@ -289,17 +289,11 @@
         <p>Copyright © 2020 the The One Villa Reserved</p>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
+    <!-- 鼠標 -->
+    <div class="cursor">
+        <div class="cursor-inner cursor-inner--circle"></div>
+        <div class="cursor-inner cursor-inner--dot"></div>
+    </div>
 
 
 
@@ -405,5 +399,79 @@
             }
         }
 
+
+        // 鼠標
+        {
+            // Some help functions.
+            const lerp = (a, b, n) => (1 - n) * a + n * b;
+            const getMousePos = (e) => {
+                let posx = 0;
+                let posy = 0;
+                if (!e) e = window.event;
+                if (e.pageX || e.pageY) {
+                    posx = e.pageX;
+                    posy = e.pageY;
+                }
+                else if (e.clientX || e.clientY) {
+                    posx = e.clientX + body.scrollLeft + document.documentElement.scrollLeft;
+                    posy = e.clientY + body.scrollTop + document.documentElement.scrollTop;
+                }
+                return { x: posx, y: posy }
+            }
+
+            // Custom mouse cursor.
+            class CursorFx {
+                constructor(el) {
+                    this.DOM = { el: el };
+                    this.DOM.dot = this.DOM.el.querySelector('.cursor-inner--dot');
+                    this.DOM.circle = this.DOM.el.querySelector('.cursor-inner--circle');
+                    this.bounds = { dot: this.DOM.dot.getBoundingClientRect(), circle: this.DOM.circle.getBoundingClientRect() };
+                    this.scale = 1;
+                    this.opacity = 1;
+                    this.mousePos = { x: 0, y: 0 };
+                    this.lastMousePos = { dot: { x: 0, y: 0 }, circle: { x: 0, y: 0 } };
+                    this.lastScale = 1;
+                    this.lastOpacity = 1;
+
+                    this.initEvents();
+                    requestAnimationFrame(() => this.render());
+                }
+                initEvents() {
+                    window.addEventListener('mousemove', ev => this.mousePos = getMousePos(ev));
+                }
+                render() {
+                    this.lastMousePos.dot.x = lerp(this.lastMousePos.dot.x, this.mousePos.x - this.bounds.dot.width / 2, 1);
+                    this.lastMousePos.dot.y = lerp(this.lastMousePos.dot.y, this.mousePos.y - this.bounds.dot.height / 2, 1);
+                    this.lastMousePos.circle.x = lerp(this.lastMousePos.circle.x, this.mousePos.x - this.bounds.circle.width / 2, 0.15);
+                    this.lastMousePos.circle.y = lerp(this.lastMousePos.circle.y, this.mousePos.y - this.bounds.circle.height / 2, 0.15);
+                    this.lastScale = lerp(this.lastScale, this.scale, 0.15);
+                    this.lastOpacity = lerp(this.lastOpacity, this.opacity, 0.1);
+                    this.DOM.dot.style.transform = `translateX(${(this.lastMousePos.dot.x)}px) translateY(${this.lastMousePos.dot.y}px)`;
+                    this.DOM.circle.style.transform = `translateX(${(this.lastMousePos.circle.x)}px) translateY(${this.lastMousePos.circle.y}px) scale(${this.lastScale})`;
+                    this.DOM.circle.style.opacity = this.lastOpacity
+                    requestAnimationFrame(() => this.render());
+                }
+                enter() {
+                    cursor.scale = 2.7;
+                }
+                leave() {
+                    cursor.scale = 1;
+                }
+                click() {
+                    this.lastScale = 1;
+                    this.lastOpacity = 0;
+                }
+            }
+
+            const cursor = new CursorFx(document.querySelector('.cursor'));
+
+            // Custom cursor changes state when hovering on elements with 'data-hover'.
+            [...document.querySelectorAll('[data-hover]')].forEach((link) => {
+                link.addEventListener('mouseenter', () => cursor.enter());
+                link.addEventListener('mouseleave', () => cursor.leave());
+                link.addEventListener('click', () => cursor.click());
+            });
+
+        }
     </script>
 </body>

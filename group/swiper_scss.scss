@@ -9,7 +9,7 @@ body {
 
 nav {
   background-color: black;
-  opacity:0.8;
+  opacity: 0.8;
   .navbar-brand {
     margin-left: 6%;
 
@@ -58,7 +58,7 @@ nav {
           letter-spacing: 2px;
           color: white;
         }
-        .hvr-underline-from-left:before{
+        .hvr-underline-from-left:before {
           background: #999999;
         }
       }
@@ -67,7 +67,7 @@ nav {
 }
 
 #swiper_banner {
-  padding:60px 0 ;
+  padding: 60px 0;
   @media (max-width: 768px) {
     padding: 0;
   }
@@ -78,7 +78,7 @@ nav {
   .main {
     .title_text {
       // 包棟房型
-  
+
       h2 {
         text-align: center;
         margin: 0;
@@ -101,7 +101,7 @@ nav {
             font-size: 21px;
             letter-spacing: 3px;
             color: #999999;
-            
+
             @media (max-width: 375px) {
               font-size: 18px;
             }
@@ -197,12 +197,11 @@ nav {
             text-align: left;
           }
         }
-       
       }
     }
     .text_content {
       margin-bottom: 30px;
-      
+
       p {
         font-size: 18px;
         line-height: 35px;
@@ -230,4 +229,78 @@ footer {
   @media screen and (max-width: 400px) {
     font-size: 10px;
   }
+}
+
+/* 鼠標 */
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap");
+
+/* mirar si es valido para IE */
+body {
+  cursor: none;
+}
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+
+.icon {
+  animation: jelly 0.5s infinite;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+.cursor-inner {
+  z-index: 9999;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+
+.cursor-inner--dot {
+  width: 8px;
+  height: 8px;
+  background-color: #b4a05b;
+}
+
+.cursor-inner--circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #b4a05b;
+}
+
+/* .cursor-inner--circle {
+	width: 8px;
+	height: 8px;
+    background-color: rgba(180, 160, 91,0.4);
+    mix-blend-mode: difference;
+} */
+
+@media screen and (max-width: 53em) {
+  .cursor {
+    visibility: hidden;
+  }
+}
+
+a {
+  cursor: none;
 }
