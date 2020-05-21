@@ -1,8 +1,8 @@
 {
   "name": "THE ONE VILLA",
   "short_name": "THE ONE",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/group/?pwa",
