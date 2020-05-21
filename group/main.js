@@ -53,7 +53,7 @@ $(function () {
     var content = document.querySelector(".content")
     var hash = window.location.hash;
 
-    console.log(hash);
+    // console.log(hash);
 
     setTimeout(function () {
         block.classList.add("none")

@@ -1,0 +1,15 @@
+{
+    "short_name": "THE ONE",
+    "name": "The One Villa",
+    "icons": [
+        {
+            "src": "./img/logo.png",
+            "sizes": "192×192",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/?pwa",
+    "background_color": "#000",
+    "theme_color": "#536878",
+    "display": "standalone"
+}
