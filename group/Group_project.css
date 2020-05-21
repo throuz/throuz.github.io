@@ -112,6 +112,14 @@ body {
     #section_B .row .tiler img {
         opacity: 1;
     }
+    #section_B .row .tiler .text_C{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #section_B .row .tiler h5{
+        margin: 0;
+    }
+
 }
 
 .tiler img {
@@ -251,7 +259,7 @@ body {
     #section_B .big_title .row .tiler .text_C {
         display: block;
         width: 70%;
-        height: 80%;
+        height: 60%;
         text-align: center;
         background-color: rgba(255, 255, 255, 0.623);
         padding: 10px 3px;
@@ -261,13 +269,14 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         overflow: hidden;
+        display: flex;
     }
 
     #section_B .big_title .row .tiler .text_C h5 {
         font-size: 16px;
         letter-spacing: 1px;
         font-weight: bold;
-        margin: 10px 0;
+        margin: 0;
         text-justify: auto;
     }
     #section_B .big_title .row .tiler .text_C p {

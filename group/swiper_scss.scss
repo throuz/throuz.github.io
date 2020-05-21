@@ -25,7 +25,9 @@ nav {
     }
   }
 
-  .fa-phone-alt {
+  a {
+    display: none;
+
     @media screen and (max-width: 768px) {
       color: white;
       display: block;
