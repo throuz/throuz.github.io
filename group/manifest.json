@@ -5,7 +5,8 @@
         {
             "src": "./img/logo.png",
             "sizes": "192×192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
     "start_url": "/?pwa",
