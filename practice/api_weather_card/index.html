@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>天氣卡片樣板</title>
+    <style>
+        #date {
+            text-align: center;
+        }
+
+        #block {
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: auto;
+        }
+
+        .card {
+            width: 25%;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: blanchedalmond;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .icon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .icon img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .location {
+            width: 100%;
+            text-align: center;
+        }
+
+        .overview {
+            width: 100%;
+            text-align: center;
+        }
+
+        .h_tem {
+            width: 100%;
+            text-align: center;
+        }
+
+        .l_tem {
+            width: 100%;
+            text-align: center;
+        }
+
+        .narrative {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="date"></h1>
+
+    <div id="block">
+        <div class="card">
+            <div class="icon">
+                <img src="https://png.pngtree.com/png-clipart/20190906/original/pngtree-cloud-icon-png-image_4562941.jpg"
+                    alt="">
+            </div>
+            <h2 class="location">台北</h2>
+            <div class="overview">小雨</div>
+            <div class="h_tem">20度</div>
+            <div class="l_tem">15度</div>
+            <div class="narrative">有點冷</div>
+        </div>
+    </div>
+
+    <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-A1A2E4FE-9DDF-426F-95E8-5FAF29B1C4BE')
+            .then((response) => {
+                return response.json()
+            })
+            .then((weather_information) => {
+                let locations = weather_information.records.location
+
+                locations.forEach((location_data) => {
+                    let location_name = location_data.locationName
+
+                    let overview = location_data.weatherElement[0].time[0].parameter.parameterName
+
+                    let h_tem = location_data.weatherElement[4].time[0].parameter.parameterName
+
+                    let l_tem = location_data.weatherElement[2].time[0].parameter.parameterName
+
+                    let narrative = location_data.weatherElement[3].time[0].parameter.parameterName
+
+                    let weather_value = location_data.weatherElement[0].time[0].parameter.parameterValue
+
+                    let weather_image = ''
+
+                    if (weather_value < 4) {
+                        weather_image = 'https://png.pngtree.com/png-clipart/20190904/original/pngtree-sunny-icon-png-image_4499465.jpg'
+                    }
+                    else if (weather_value > 3 && weather_value < 8) {
+                        weather_image = 'https://png.pngtree.com/png-clipart/20190906/original/pngtree-cloud-icon-png-image_4562941.jpg'
+                    }
+                    else {
+                        weather_image = 'https://media.istockphoto.com/vectors/rainy-vector-icon-isolated-on-transparent-background-rainy-logo-vector-id1042689392'
+                    }
+
+                    const block = document.querySelector('#block')
+
+                    block.innerHTML += `
+                        <div class="card">
+                            <div class="icon">
+                                <img src="${weather_image}" alt="">
+                            </div>
+                            <h2 class="location">${location_name}</h2>
+                            <div class="overview">${overview}</div>
+                            <div class="h_tem">${h_tem}度</div>
+                            <div class="l_tem">${l_tem}度</div>
+                            <div class="narrative">${narrative}</div>
+                        </div>
+                    `
+                })
+            })
+
+        let datebox = document.querySelector('#date')
+
+        let date = new Date()
+
+        datebox.innerHTML += date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日' + date.getHours() + '時' + date.getMinutes() + '分' + date.getSeconds() + '秒'
+    </script>
+</body>
+
+</html>

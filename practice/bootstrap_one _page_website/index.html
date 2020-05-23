@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- swiper cdn -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <!-- parallax cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <title>bootstrap一頁式練習</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            padding-top: 75px;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+        }
+
+        #first {
+            padding: 60px 0;
+        }
+        #first .container h1 {
+            text-align: center;
+        }
+
+        #scene {
+            background-image: url(https://www.colatour.com.tw/webDM/theme/aurora/style/img/photo06.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 180px 60px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        #scene h1 {
+            color: white;
+            text-align: center;
+            margin: 0;
+            text-shadow: black 0.1em 0.1em 0.2em
+        }
+
+        #third {
+            padding: 60px 0;
+        }
+        #third .row {
+            margin: 30px 0;
+        }
+        #third .col {
+            padding: 20px;
+        }
+        .p_box {
+            height: 100%;
+            padding: 20px 0;
+        }
+
+        footer {
+            height: 10vh;
+            background-color: black;
+        }
+        footer h6 {
+            text-align: center;
+            line-height: 10vh;
+            margin: 0;
+            color: white;
+        }
+
+        @media screen and (max-width: 1200px){
+            h1 {
+                font-size: 30px;
+            }
+        }
+        @media screen and (max-width: 992px){
+            h1 {
+                font-size: 25px;
+            }
+        }
+        @media screen and (max-width: 576px){
+            h6 {
+                font-size: 10px;
+            }
+        }
+
+        #one, #two, #three {
+            margin-top: -75px;
+            margin-bottom: 75px;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.ntupes.edu.tw/upload/photo/small/o_1bqcf6so21b96jmts8v1pt7e4i1a.jpg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#one">first</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#two">second</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#three">third</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Swiper -->
+    <section class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://cdn1.guidetoiceland.com.cn/564309/x/0/47-is.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.1.0&w=883&s=bbaa2db9e94d62b8d22c80715c803827" alt=""></div>
+            <div class="swiper-slide"><img src="https://1.bp.blogspot.com/--wv04XEX2nw/WYwJ1Qqe_SI/AAAAAAAAAPM/DsDlA7SthfEN_fApywJrwzVrC2gI7EB9ACLcBGAs/s1600/%25E9%25BB%2583%25E5%2588%2580%25E9%258E%25AETeepee%25E5%25B8%25B3%25E7%25AF%25B7_04%2528%25E5%259C%2596%25E4%25B8%258A%25E9%259C%2580%25E6%25A8%2599%25E8%25A8%25BBAurora%2BVillage%2B%25E6%25A5%25B5%25E5%2585%2589%25E6%259D%2591%2529.JPG" alt=""></div>
+            <div class="swiper-slide"><img src="https://content.skyscnr.com/m/7ed52a247bd675d1/original/shutterstock-730865425.jpg?resize=800px:600px&quality=100" alt=""></div>
+            <div class="swiper-slide"><img src="https://www.colatour.com.tw/webDM/theme/aurora/style/img/photo06.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://www.xotours.net/images/materials/aurora/download.png" alt=""></div>
+            <div class="swiper-slide"><img src="https://www.colatour.com.tw/webDM/theme/aurora/style/img/photo17.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://egtravelblog.files.wordpress.com/2017/08/15.jpg?w=600" alt=""></div>
+            <div class="swiper-slide"><img src="https://hk.blog.kkday.com/wp-content/uploads/Screen-Shot-2019-12-02-at-6.58.28-PM-760x510@2x.png" alt=""></div>
+            <div class="swiper-slide"><img src="https://images.chinatimes.com/newsphoto/2019-03-02/900/20190302001625.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2019/12/06/2/7156491.jpg&x=0&y=0&sw=0&sh=0&exp=3600" alt=""></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <div id="one"></div>
+    <section id="first">
+        <div class="container">
+            <h1>極光</h1>
+            <div class="row">
+                <div class="col-12 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="card mx-auto my-3">
+                        <img src="https://content.skyscnr.com/m/7ed52a247bd675d1/original/shutterstock-730865425.jpg?resize=800px:600px&quality=100" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="card mx-auto my-3">
+                        <img src="https://images.chinatimes.com/newsphoto/2019-03-02/900/20190302001625.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="card mx-auto my-3">
+                        <img src="https://www.xotours.net/images/materials/aurora/download.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="two"></div>
+    <section id="second">
+        <div id="scene">
+            <h1 data-depth="0.2">是一種電漿體現象，主要發生在具有磁場的行星上的高緯度區域，而在地球上的極光帶即是經度上距離地磁極10°至20°，緯度寬約3°至6°的區域。當磁暴發生時，在較低的緯度也會出現極光。</h1>
+        </div>
+    </section>
+
+    <div id="three"></div>
+    <section id="third">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <img src="https://1.bp.blogspot.com/--wv04XEX2nw/WYwJ1Qqe_SI/AAAAAAAAAPM/DsDlA7SthfEN_fApywJrwzVrC2gI7EB9ACLcBGAs/s1600/%25E9%25BB%2583%25E5%2588%2580%25E9%258E%25AETeepee%25E5%25B8%25B3%25E7%25AF%25B7_04%2528%25E5%259C%2596%25E4%25B8%258A%25E9%259C%2580%25E6%25A8%2599%25E8%25A8%25BBAurora%2BVillage%2B%25E6%25A5%25B5%25E5%2585%2589%25E6%259D%2591%2529.JPG" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="p_box d-flex align-items-center">
+                        <p>極光是地球周圍的一種大規模放電的過程。來自太陽的帶電粒子到達地球附近，地球磁場迫使其中一部分沿著磁場線集中到南北兩極。當他們進入極地的高層大氣（>80km）時，與大氣中的原子和分子碰撞並激發，能量釋放產生的光芒形成圍繞著磁極的大圓圈，即極光。[17]極光最易出現的時期是春分和秋分兩個節氣來臨之前，且春秋兩季出現頻率更甚夏冬。這是因為在春分和秋分兩節氣時地球位置與「磁索」交錯最甚。</p>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 order-xl-1 order-lg-1 order-md-0 order-sm-0">
+                    <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2019/12/06/2/7156491.jpg&x=0&y=0&sw=0&sh=0&exp=3600" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="p_box d-flex align-items-center">
+                        <p>在北半球觀察到的極光稱北極光，南半球觀察到的極光稱南極光，經常出現的地方是在南北緯度67度附近的兩個環帶狀區域內，阿拉斯加的費爾班克斯一年之中有超過200天的極光現象，因此被稱為「北極光首都」。而冰島由於整個國家都在極光帶上[20]，也是北半球受歡迎的觀測極光地點。南極光與北極光是同時變化的（可視為北極光的鏡像）[21]。在高緯度的南美洲、澳大利亞、紐西蘭和南極洲可以看見南極光。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h6>Copyright © 2020 極光 版權所有 | 網站設計 徐叡陞</h6>
+    </footer>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+    <!-- parallax -->
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    </script>
+
+    <script>
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+</body>
+</html>

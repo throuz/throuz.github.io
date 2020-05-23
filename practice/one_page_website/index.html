@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/bitbug_favicon2.ico" />
+    <script src="https://kit.fontawesome.com/e67efbad7f.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>一頁式大挑戰</title>
+    <style>
+        * {
+            font-family: "微軟正黑體";
+        }
+
+        body {
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        p {
+            line-height: 30px;
+        }
+
+        #top {
+            width: 100%;
+            height: calc(100vh - 100px);
+            background-color: darkgrey;
+        }
+
+        #top .topbar {
+            width: 100%;
+            height: 100px;
+        }
+
+        #top .logobox {
+            max-width: 1140px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #top .logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        #top .logobox h1 {
+            padding-left: 30px;
+            font-size: 50px;
+            margin: 0;
+        }
+
+        #top .banner {
+            width: 100%;
+            height: calc(100vh - 200px);
+            background-image: url(./img/banner.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #navbar {
+            background-color: rgba(169, 169, 169, 0.9);
+            position: sticky;
+            top: 0;
+        }
+
+        #navbar .navbarbox {
+            max-width: 1140px;
+            height: 100px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navbar .anchor {
+            width: 150px;
+            height: 50px;
+            background-color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            color: #000000;
+            transition-duration: 0.5s;
+        }
+
+        #navbar .anchor:hover {
+            background-color: #000;
+            color: #ffffff;
+        }
+
+        #first {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./img/first.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #first .content {
+            max-width: 1140px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #first .content .contentbox {
+            width: 100%;
+            color: white;
+        }
+
+        #first .content .contentbox h1 {
+            text-align: center;
+        }
+
+        #second {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #second .content {
+            max-width: 1140px;
+            height: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #second .content img {
+            width: 48%;
+            height: 45%;
+            object-fit: cover;
+        }
+
+        #second .content p {
+            width: 48%;
+            height: 45%;
+        }
+
+        #third {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #third .content {
+            max-width: 1140px;
+            height: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #third .content img {
+            width: 30%;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        #third .content p {
+            width: 30%;
+            height: 30%;
+        }
+
+        #fourth {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./img/fourth.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #fourth h1 {
+            width: 100%;
+            text-align: center;
+            color: white;
+            padding: 10vw;
+        }
+
+        #fifth {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        #fifth .block_1 {
+            width: 50%;
+            height: 100%;
+            background-image: url(./img/fifth-1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #fifth .block_1 p {
+            padding: 20%;
+            color: white;
+        }
+
+        #fifth .block_2 {
+            width: 50%;
+            height: 100%;
+            background-image: url(./img/fifth-2.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #fifth .block_2 p {
+            padding: 20%;
+            color: white;
+        }
+
+        #sixth {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #sixth .content {
+            max-width: 1140px;
+            height: 60%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #sixth .content img {
+            width: 45%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #sixth .content .contentbox {
+            width: 45%;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #555555;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #footer h3 {
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        #gototop {
+            width: 80px;
+            height: 50px;
+            background-color: white;
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            color: #000000;
+            border: 1px solid #000;
+            transition-duration: 0.5s;
+        }
+
+        #gototop:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .fas {
+            display: none;
+        }
+
+        i {
+            position: fixed;
+            top: 5vh;
+            left: 5vh;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        @media screen and (max-width: 1200px) {
+            #top .topbar {
+                padding: 0 30px;
+                box-sizing: border-box;
+            }
+
+            #navbar .navbarbox {
+                padding: 0 30px;
+                box-sizing: border-box;
+            }
+
+            #navbar .anchor {
+                width: 110px;
+                height: 50px;
+            }
+
+            #first {
+                padding: 0 30px;
+                box-sizing: border-box;
+            }
+
+            #second {
+                padding: 0 30px;
+                box-sizing: border-box;
+            }
+
+            #third {
+                padding: 0 30px;
+                box-sizing: border-box;
+            }
+
+            #forth {
+                padding: 0 30px;
+                box-sizing: border-box;
+            }
+
+            #sixth {
+                padding: 0 30px;
+                box-sizing: border-box;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+
+            #top {
+                height: 100vh;
+            }
+
+            #top .topbar {
+                height: 10vh;
+                position: fixed;
+                background-color: #555555f8;
+            }
+
+            #top .logobox {
+                height: 100%;
+                justify-content: center;
+            }
+
+            #top .logo {
+                width: 8vh;
+                height: 8vh;
+            }
+
+            #top .logobox h1 {
+                display: none;
+            }
+
+            #top .banner {
+                height: 100vh;
+            }
+
+            #gototop {
+                width: 8vh;
+                height: 5vh;
+                right: 10vw;
+                bottom: 10vh;
+                line-height: 5vh;
+            }
+
+            #navbar {
+                width: 40%;
+                position: fixed;
+                top: 10vh;
+                display: none;
+            }
+
+            #navbar .navbarbox {
+                height: 90vh;
+                justify-content: center;
+                align-items: stretch;
+            }
+
+            #navbar .anchor {
+                width: 100%;
+                height: 13vh;
+                background-color: #99999900;
+                line-height: 13vh;
+            }
+
+            .fas {
+                display: inline-block;
+            }
+
+            #first {
+                height: auto;
+            }
+
+            #first .content {
+                padding: 10vw;
+            }
+
+            #second {
+                height: auto;
+            }
+
+            #second .content {
+                height: 100%;
+                justify-content: center;
+                padding: 10vw;
+            }
+
+            #second .content img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            #second .content p {
+                width: 100%;
+                height: auto;
+            }
+
+            #second .content p:nth-child(2) {
+                order: 1;
+            }
+
+            #third {
+                height: auto;
+            }
+
+            #third .content {
+                height: 80%;
+                justify-content: center;
+                padding: 10vw;
+            }
+
+            #third .content img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            #third .content p {
+                width: 100%;
+                height: auto;
+            }
+
+            /*無法作動?*/
+            /* #third .content img:nth-child(1) {
+                order: 1;
+            }
+
+            #third .content img:nth-child(2) {
+                order: 3;
+            }
+
+            #third .content img:nth-child(3) {
+                order: 5;
+            }
+
+            #third .content p:nth-child(1){
+                order: 3;
+            }
+
+            #third .content p:nth-child(2){
+                order: 2;
+            }
+
+            #third .content p:nth-child(3){
+                order: 1;
+            } */
+
+            .third_img_1 {
+                order: 0;
+            }
+
+            .third_img_2 {
+                order: 2;
+            }
+
+            .third_img_3 {
+                order: 4;
+            }
+
+            .third_p_1 {
+                order: 1;
+            }
+
+            .third_p_2 {
+                order: 3;
+            }
+
+            .third_p_3 {
+                order: 5;
+            }
+
+            #fifth {
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            #fifth .block_1 {
+                width: 100%;
+                height: auto;
+            }
+
+            #fifth .block_1 p {
+                padding: 10vw;
+            }
+
+            #fifth .block_2 {
+                width: 100%;
+                height: auto;
+            }
+
+            #fifth .block_2 p {
+                padding: 10vw;
+            }
+
+            #sixth {
+                height: auto;
+            }
+
+            #sixth .content {
+                height: auto;
+                justify-content: center;
+            }
+
+            #sixth .content img {
+                width: 100%;
+                height: auto;
+            }
+
+            #sixth .content .contentbox {
+                width: 100%;
+                padding: 10vw;
+            }
+
+            #footer {
+                height: 10vh;
+            }
+
+            #footer h3 {
+                font-size: 8px;
+            }
+
+            #top .topbar {
+                padding: 0;
+            }
+
+            #navbar .navbarbox {
+                padding: 0;
+            }
+
+            #first {
+                padding: 0;
+            }
+
+            #second {
+                padding: 0;
+            }
+
+            #third {
+                padding: 0;
+            }
+
+            #forth {
+                padding: 0;
+            }
+
+            #sixth {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <div class="topbar">
+            <div class="logobox">
+                <img src="./img/logo.png" alt="" class="logo">
+                <h1>Rusheng piano</h1>
+            </div>
+        </div>
+        <div class="banner"></div>
+
+    </div>
+
+    <div id="navbar">
+        <div class="navbarbox">
+            <a href="#first" class="anchor">古代鋼琴</a>
+            <a href="#second" class="anchor">現代鋼琴</a>
+            <a href="#third" class="anchor">鋼琴結構</a>
+            <a href="#fourth" class="anchor">演奏方法</a>
+            <a href="#fifth" class="anchor">鋼琴品牌</a>
+            <a href="#sixth" class="anchor">電子鋼琴</a>
+        </div>
+    </div>
+
+    <div id="first">
+        <div class="content">
+            <div class="contentbox">
+                <h1>古代鋼琴</h1>
+                <p>現代鋼琴發明以前，巴洛克時代，就已經有了兩種類似的鍵盤樂器。一種是撥弦鍵琴（又稱大鍵琴），這些種類的古鍵琴的發聲原理類似于吉他這樣的撥弦樂器，用機械傳動裝置帶動一個撥弦的小臂由羽管或皮製撥子撥動琴弦，缺點是沒有辦法控制力度，音量總是一樣大小。另一種是擊弦鍵琴（又稱小鍵琴），體積較小，用銅楔槌擊打琴弦，和鋼琴不同的是，楔槌不是立刻離開琴弦，而是保持在弦上的壓力，直到手指離開琴鍵，因而擊弦鍵琴可以用手指控制音量，並且可以有細微變化的效果，音色富有歌唱性，缺點是音量很小，只適合家庭使用。<br>
+                    17世紀藝術歌曲的發展，對伴奏樂器提出了越來越高的要求，小提琴聲音太細，魯特琴的技巧要求太高難以掌握，各種古鋼琴的音色和音量又不能讓人滿意。<br>
+                    大鍵琴的製造者克里斯托福里，在總結了大鍵琴和小鍵琴的優缺點以後，在約1709年試製了一種增加了擊槌裝置的鍵盤樂器，它和小鍵琴的最關鍵的區別是擊弦機的機械系統：擊槌敲擊琴弦後會立即彈開，使琴弦持續振動，直到手指離開琴鍵；而且擊槌彈開後不會來回彈動，同時又可以迅速的重複擊鍵。在之後鋼琴發展中，這些要素都保留並不斷改進，它同時解決了不能隨意控制演奏音量的缺陷，克里斯托福里給它取名「有強弱的大鍵琴」（gravicembali
+                    col piano e
+                    forte）[2]，這台樂器也就是古鋼琴。克里斯托福里製造了大約20台鋼琴，現存於世還有三台：一台制於1720年，四個八度，現存美國紐約大都會藝術博物館[3]；一台製於1726年，四個半八度，現存德國萊比錫；一台製於1722年，現存義大利羅馬。[4]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="second">
+        <div class="content">
+            <img src="./img/second-1.jpg" alt="">
+            <p>19世紀初，各種鋼琴已經盛行於歐洲，但它還在不斷的改進中。1780年，瑞士的舒迪創製了制音踏板，從而提高了音樂的和弦連接能力，增強了共鳴效果，同時也使得音樂獲得清晰的頓音效果。1809年，法國人埃拉爾改進了鋼琴機械，可以使小槌迅速地重複擊弦，在這樣的鋼琴上就能彈奏比較複雜的樂曲了。這種結構形式至今還使用於平台鋼琴上。1826年，美國工程師霍金斯採用了軸釘、軸架和攀帶改進了擊弦機構。在這一時期內還有不少製造者對鋼琴的支撐結構、弦列的安排以及小槌材料等進行了改進。
+            </p>
+            <p>19世紀初，各種鋼琴已經盛行於歐洲，但它還在不斷的改進中。1780年，瑞士的舒迪創製了制音踏板，從而提高了音樂的和弦連接能力，增強了共鳴效果，同時也使得音樂獲得清晰的頓音效果。1809年，法國人埃拉爾改進了鋼琴機械，可以使小槌迅速地重複擊弦，在這樣的鋼琴上就能彈奏比較複雜的樂曲了。這種結構形式至今還使用於平台鋼琴上。1826年，美國工程師霍金斯採用了軸釘、軸架和攀帶改進了擊弦機構。在這一時期內還有不少製造者對鋼琴的支撐結構、弦列的安排以及小槌材料等進行了改進。
+            </p>
+            <img src="./img/second-2.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="third">
+        <div class="content">
+            <img class="third_img_1" src="./img/third-1.jpg" alt="">
+            <img class="third_img_2" src="./img/third-1.jpg" alt="">
+            <img class="third_img_3" src="./img/third-1.jpg" alt="">
+            <p class="third_p_1">
+                1.鋼琴從外形上主要分成平台式鋼琴（平台鋼琴）與直立式鋼琴。平台式鋼琴是鋼琴最原始的形態，現在一般都用於音樂會的演奏。直立式鋼琴的琴弦為交錯安裝，既省空間亦具備音色和音量。鋼琴由弦列、音板、支架、鍵盤系統（包括黑白琴鍵和擊弦音棰，共88個琴鍵）、踏板機械（包括頂杆和踏板）和外殼共六大部分組成。平台式鋼琴和直立式鋼琴的基本結構是一樣的。
+            </p>
+            <p class="third_p_2">
+                2.鋼琴從外形上主要分成平台式鋼琴（平台鋼琴）與直立式鋼琴。平台式鋼琴是鋼琴最原始的形態，現在一般都用於音樂會的演奏。直立式鋼琴的琴弦為交錯安裝，既省空間亦具備音色和音量。鋼琴由弦列、音板、支架、鍵盤系統（包括黑白琴鍵和擊弦音棰，共88個琴鍵）、踏板機械（包括頂杆和踏板）和外殼共六大部分組成。平台式鋼琴和直立式鋼琴的基本結構是一樣的。
+            </p>
+            <p class="third_p_3">
+                3.鋼琴從外形上主要分成平台式鋼琴（平台鋼琴）與直立式鋼琴。平台式鋼琴是鋼琴最原始的形態，現在一般都用於音樂會的演奏。直立式鋼琴的琴弦為交錯安裝，既省空間亦具備音色和音量。鋼琴由弦列、音板、支架、鍵盤系統（包括黑白琴鍵和擊弦音棰，共88個琴鍵）、踏板機械（包括頂杆和踏板）和外殼共六大部分組成。平台式鋼琴和直立式鋼琴的基本結構是一樣的。
+            </p>
+        </div>
+    </div>
+
+    <div id="fourth">
+        <h1>鋼琴用大譜表記譜。需要時，可用兩行高音譜表或兩行低音譜表記譜。</h1>
+    </div>
+
+    <div id="fifth">
+        <div class="block_1">
+            <p>史坦威公司（Steinway & Sons）是一家美國鋼琴製造公司。亨利·史坦威（Heinrich Engelhard Steinwey，後來改名為Henry E.
+                Steinway）於1797年出生，是一位德國裔美國人。1836年，亨·史坦威在他的廚房中打造了他第一部鋼琴。1850年亨利·史坦威跟他的妻兒移民到美國。1853年時在美國紐約曼哈頓成立了史坦威公司（Steinway
+                &
+                Sons）[10]。他第一部在公司生產的鋼琴現在於紐市大都會藝術博物館展出。自1855年開始，史坦威鋼琴在一些歐美的展覧中獲得多個金牌獎。1857年，史坦威成立了第一個史坦威鋼琴展示中心，1866年，史坦威公司成立了史坦威演奏廳。1995年，史坦威音樂資產公司與塞爾瑪公司合併，成為史坦威樂器公司（Steinway
+                Musical Instruments）。</p>
+        </div>
+        <div class="block_2">
+            <p>貝森朵夫鋼琴廠有限公司（德語：L. Bösendorfer Klavierfabrik
+                GmbH）是一家奧地利鋼琴製造公司，其母公司是日本山葉株式會社[5]。不同於一般的鋼琴製造商，貝森朵夫是唯一一家生產92鍵以及97鍵的平台鋼琴的廠商（一般鋼琴為88鍵）。貝森朵夫鋼琴廠是世界上最古老的鋼琴製造商之一，該品牌由伊格納茲·貝森朵夫於1828年在奧地利維也納創立。其製造的平台鋼琴以頂級的品質聞名於世。1839年，公司接受當時奧地利皇帝斐迪南一世的皇家委任狀專門為皇室提供頂級平台鋼琴。納茨去世後，他的兒子路德維希·貝森朵夫於1859年接管公司的運營並於1860年將公司遷至新址，後來成為貝森朵夫音樂廳。從1872年至1913年關閉，它一直是維也納首屈一指的音樂廳。1909年，公司被一名叫卡爾·胡特爾斯特拉瑟的商人買下，並於1966年售予晶寶國際公司。直至2002年，公司被奧地利BawagP.S.K.銀行購得，公司股權又回到了奧地利人手中。但是2007年12月20日，Bawag
+                P.S.K.銀行又把公司所有的股權賣給了日本的山葉株式會社。[6]目前台灣總代理為德斯特樂器。</p>
+        </div>
+    </div>
+
+    <div id="sixth">
+        <div class="content">
+            <img src="./img/sixth.jpg" alt="">
+            <div class="contentbox">
+                <h1>電鋼琴</h1>
+                <p>電鋼琴是一種電子樂器，外形和鋼琴類似。與使用合成器的電子鋼琴的不同在於它使用機械發聲，再經由拾音器轉化成電訊號，發聲原理和電吉他類似，都是以類比訊號直接輸出到電鋼琴專用的樂器放大器或輸出到錄音裝置，而非像鋼琴般以其木箱外殼來直接共鳴發聲。和鋼琴類似的地方是，其木造琴鍵牽動鋼琴內部包著絨氈的小木槌，這結構是一模一樣的；繼而敲擊鋼絲弦發出振動，這運作原理都是相同的。不同的地方是，並不是以箱體的的振動發聲，而是運用了電磁學原理，由每條琴弦對應的每粒拾音器來感應並收集每條琴弦的振動。當琴弦振動時，切割了拾音器的磁感線，從而使拾音器接上的導線中產生不同頻率的電流，當這些電流通過電子音箱還原時，就成了電鋼琴的聲音。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <h3>Copyright © 2020 Rusheng piano Inc. All rights reserved | site by 徐叡陞</h3>
+    </div>
+
+    <a href="#top" id="gototop">TOP</a>
+
+    <i class="fas fa-bars fa-2x"></i>
+
+    <script>
+        $('i').click(() => {
+            $('#navbar').toggle()
+        })
+
+        $('.anchor').click(() => {
+            $('#navbar').toggle()
+        })
+    </script>
+</body>
+
+</html>

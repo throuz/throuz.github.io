@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>以物件做資料傳輸</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #block {
+            width: 1300px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .card {
+            width: 300px;
+            height: 800px;
+            background-color: blanchedalmond;
+        }
+
+        .imgbox {
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card img {
+            height: 100%;
+        }
+
+        h1 {
+            padding: 20px;
+        }
+
+        p {
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="block">
+        <div class="card">
+            <div class="imgbox"><img src="https://img.moegirl.org/common/thumb/0/0c/Kyaru.png/255px-Kyaru.png" alt=""></div>
+            <h1>凱留</h1>
+            <p>
+                攻擊方式：魔法<br/>
+                速度：450<br/>
+                位置：750<br/>
+                介紹：本名百地希留耶，本作初始御三家之一，貓耳獸人少女，受霸瞳皇帝的指派負責監視騎士和可可蘿等人，已經確定是加入美食殿堂的臥底。自身是容易吸引貓的體質，也很喜歡跟小貓玩，也因為這個原因在跟蹤騎士時經常跟丟。對蟲子和魔物的肉十分恐懼，同時也驚嘆於佩可莉露什麼都吃得下。
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let character = [{
+            imgsrc: 'https://img.moegirl.org/common/c/c2/Pecorine.png',
+            name: '貪吃佩可',
+            attack: '物理',
+            speed: 450,
+            position: 155,
+            introduction: '本作初始御三家之一，陣營美食殿堂大胃王，興趣是做飯吃飯，可以把一盤堆得像小山似的炒飯全部吃完並且還能繼續吃其他食物。由於喜歡四處旅行事實是為了躲避霸瞳皇帝的追捕所以很缺錢，只能在餐飲店打工，實際上還是為了能方便地吃到東西。只要是能吃的東西，就算是魔獸也吃給你看的女孩。若仔細觀察可發現其所持的劍也有一個類似齒痕的缺口所以有人調侃佩可不僅胃口好，牙口也好，當然咬是不太可能咬出這麼規則的缺口的'
+        },{
+            imgsrc: 'https://img.moegirl.org/common/2/22/Coccoro.png',
+            name: '可可蘿',
+            attack: '物理',
+            speed: 450,
+            position: 500,
+            introduction: '本名為棗可可蘿或棗心（日語：棗こころ），本作初始御三家之一，受到愛莓斯的指示作為玩家所扮演的騎士醒來之後的引導員。對於引導已經失去記憶的騎士很上心，稱呼自己為“在主線劇情第2部第1章第5話，可可蘿牽著騎士和謝菲兩人散步時，同行的日和說可可蘿“像媽媽一樣”，而她本人也被騎士和謝菲叫了“媽媽”11歲少女兒女雙全，可喜可賀'
+        },{
+            imgsrc: 'https://img.moegirl.org/common/thumb/8/81/Rino_prin_cone.png/255px-Rino_prin_cone.png',
+            name: '璃乃',
+            attack: '物理',
+            speed: 450,
+            position: 700,
+            introduction: '本名衣之咲璃乃，家境貧寒的少女，加入的陣營“拉比林斯”同樣很窮酸，為了省錢只能買二手衣服或用破布縫製衣服，為了能拿獎學金進入裁縫學院而努力讀書中。首次見面時將騎士當成了一堆破布，之後認定騎士為她的哥哥，並且對這個哥哥十分依賴。初次考試即落榜，之後一聽到類似“掉下來”之類的詞就會回想起來，在現實中同樣因為模擬考試沒考好而哭泣。'
+        }]
+
+        let card_content = document.querySelector('#block')
+
+        character.forEach(content => {
+            card_content.innerHTML += `
+                <div class="card">
+                <div class="imgbox"><img src="${content.imgsrc}" alt=""></div>
+                <h1>${content.name}</h1>
+                <p>
+                    攻擊方式：${content.attack}<br/>
+                    速度：${content.speed}<br/>
+                    位置：${content.position}<br/>
+                    介紹：${content.introduction}
+                </p>
+                </div>`
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #block {
+            width: 500px;
+            margin: auto;
+        }
+
+        #tab_button_box {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .tab_button {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            list-style: none;
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;
+            transition-duration: 0.5s;
+        }
+
+        .tab_button:hover {
+            background-color: wheat;
+        }
+
+        #tab_content_box {
+            background-color: rgb(174, 211, 101);
+        }
+
+        .tab_content {
+            height: 500px;
+            display: none;
+        }
+
+        .tab_content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="block">
+        <ul id="tab_button_box">
+            <li class="tab_button">first</li>
+            <li class="tab_button">second</li>
+            <li class="tab_button">third</li>
+        </ul>
+
+        <div id="tab_content_box">
+            <div class="tab_content active">
+                <h1>first</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laborum unde modi aliquam cum excepturi quam! Dicta suscipit quam molestiae esse facilis sequi velit repudiandae distinctio nisi iusto. Qui, nemo.</p>
+            </div>
+            <div class="tab_content">
+                <h1>second</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima et odio h1ic est fugit quas blanditiis consequatur delectus totam culpa? Repellendus tenetur nesciunt obcaecati deserunt quos voluptas a reiciendis dignissimos adipisci quasi nobis exercitationem provident animi neque, earum esse dicta omnis voluptatibus asperiores, assumenda magni! Non nemo incidunt praesentium, maiores veritatis amet doloribus h1ic quos voluptas alias animi corrupti. Blanditiis quibusdam dolor perferendis arch1itecto numquam ullam amet commodi magni quaerat debitis ducimus, quo animi non soluta minus! Quidem eaque magnam distinctio et, eos odit deleniti ratione mollitia fugiat quia consequatur veritatis dolorum recusandae reiciendis cum, vero illo consequuntur libero culpa.</p>
+            </div>
+            <div class="tab_content">
+                <h1>third</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut quae tempore officia sequi! Sint quasi est placeat? Quam ipsa tenetur itaque eum, fugit odit molestiae iure accusantium pariatur, adipisci consectetur, non voluptates eaque tempore! Cum fugit nesciunt quae est, doloribus dolores sed, consectetur, odit inventore quasi omnis repellat aliquam nobis non. Est asperiores magnam aliquid commodi non repellat soluta, facere, molestias cumque, sint quas consequatur ducimus enim aut quia animi earum ipsa dicta voluptatibus minus vitae ipsam explicabo corrupti veniam! Dolorum impedit reiciendis accusamus odio nostrum consequuntur! Corrupti rerum fugiat repudiandae? Accusamus repudiandae veritatis numquam consequuntur voluptate similique, cupiditate exercitationem sequi officiis iste doloribus voluptates dolores debitis consectetur ipsum. Esse, facilis excepturi. Iusto ullam consectetur quibusdam doloremque similique quos magnam commodi sint tempora distinctio nobis quas, praesentium quae vel odio a provident natus sit cupiditate nisi earum eum amet itaque iste! Voluptate quis recusandae qui quam nesciunt, voluptatibus fuga molestiae distinctio quas dicta ut, consectetur itaque magni asperiores sed tempora ipsa quibusdam perferendis deleniti assumenda! Provident, consequatur! Maiores eveniet, veniam voluptas repreh1enderit necessitatibus ullam iusto suscipit aperiam eius ducimus laborum dolores blanditiis minus quis eum dicta laboriosam pariatur nulla non laudantium ipsum vero praesentium fuga! Debitis quo cupiditate libero.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tab_buttons = document.querySelectorAll('.tab_button')//tab_buttons是一個陣列
+        const tab_contents = document.querySelectorAll('.tab_content')//tab_contents是一個陣列
+
+        for (let index = 0; index < tab_buttons.length; index++) {
+            const button = tab_buttons[index];//button是三個tab_button，但一次只能是一個
+
+            button.addEventListener('click', add_active)
+            
+            function add_active(){
+                remove_all_active()
+                let i = index + 1
+                let content = document.querySelector(".tab_content:nth-child(" + i + ")")
+                content.classList.add('active')
+            }
+
+            function remove_all_active(){
+                for (let index = 0; index < tab_contents.length; index++) {
+                    const content = tab_contents[index];
+                    content.classList.remove('active')
+                }
+            }
+        }
+    </script>
+</body>
+</html>
