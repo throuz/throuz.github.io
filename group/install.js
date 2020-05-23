@@ -25,4 +25,4 @@
 // window.addEventListener('appinstalled', logAppInstalled);
 
 // // CODELAB: Add code to log the event
-// console.log('Weather App was installed.', evt);
+// console.log('the one App was installed.', evt);
