@@ -710,9 +710,12 @@
             $('#navbar').toggle()
         })
 
-        $('.anchor').click(() => {
-            $('#navbar').toggle()
-        })
+        if (window.screen.width < 768) {
+            $('.anchor').click(() => {
+                $('#navbar').toggle()
+            })
+        }
+
     </script>
 </body>
 
