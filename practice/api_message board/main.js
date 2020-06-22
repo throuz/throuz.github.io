@@ -2,7 +2,8 @@
 //以下為fetch
 fetch('https://ajax-lesson.digipack-develop.com/news')
     .then(function (response) {
-        return response.json();
+        var res = response.json()
+        return res;
     })
     .then(function (myJson) {
         $.each(myJson, (index, object) => {
@@ -58,6 +59,24 @@ $('#send').click(() => {
     })
 
     $('input, textarea').val('')
+
+    // Fake update
+    let old_content = $('#cards').html()
+    $('#cards').html(`
+        <div class="card">
+            <a href="${send_data.href}" target="_blank">
+                <div class="img_box">
+                    <img src="${send_data.image_url}" alt="">
+                </div>
+                <div class="news">
+                    <h3>${send_data.title}</h3>
+                    <span>發布日期:${send_data.date}</span>
+                    <div class="content">${send_data.content}</div>
+                </div>
+            </a>
+        </div>
+        ${old_content}
+        `)
 
     //以下為fetch
     // fetch('http://ajax_lesson.digipack-develop.com/news')
