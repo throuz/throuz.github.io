@@ -26,10 +26,15 @@ body {
   max-lines: 2;
 }
 
+#add #push_input:focus {
+  background-color: lightblue;
+}
+
 #add #add_button {
   font-size: 20px;
   padding: 10px;
   background-color: lemonchiffon;
+  cursor: pointer;
 }
 
 #add #add_button:hover {
@@ -60,6 +65,7 @@ body {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
 
 #contents .task .click_h1 {
@@ -70,6 +76,7 @@ body {
   font-size: 20px;
   padding: 10px;
   background-color: #ffcdcd;
+  cursor: pointer;
 }
 
 #contents .task .del_button:hover {
@@ -85,10 +92,15 @@ body {
   font-family: Microsoft JhengHei;
 }
 
+#contents .task .update_input:focus {
+  background-color: lightblue;
+}
+
 #contents .task .update_button {
   font-size: 20px;
   padding: 10px;
   background-color: #cdffd1;
+  cursor: pointer;
 }
 
 #contents .task .update_button:hover {
