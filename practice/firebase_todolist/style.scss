@@ -1,0 +1,72 @@
+body {
+  font-family: Microsoft JhengHei;
+  margin: 0;
+}
+
+#add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 200px;
+  #push_input {
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 20px;
+    width: 600px;
+    font-family: Microsoft JhengHei;
+    max-lines: 2;
+  }
+  #add_button {
+    font-size: 20px;
+    padding: 10px;
+    background-color: lemonchiffon;
+    &:hover {
+      background-color: rgb(221, 217, 177);
+    }
+  }
+}
+
+#contents {
+  padding: 20px 0;
+  margin: auto;
+  .task {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+    h1 {
+      width: 300px;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .click_h1{
+        text-decoration: line-through;
+    }
+    .del_button {
+      font-size: 20px;
+      padding: 10px;
+      background-color: rgb(255, 205, 205);
+      &:hover {
+        background-color: rgb(219, 177, 177);
+      }
+    }
+    .update_input {
+      font-size: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      margin: 0 20px;
+      font-family: Microsoft JhengHei;
+    }
+    .update_button {
+      font-size: 20px;
+      padding: 10px;
+      background-color: rgb(205, 255, 209);
+      &:hover {
+        background-color: rgb(178, 224, 182);
+      }
+    }
+  }
+}

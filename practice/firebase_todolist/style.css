@@ -1,0 +1,97 @@
+body {
+  font-family: Microsoft JhengHei;
+  margin: 0;
+}
+
+#add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 200px;
+}
+
+#add #push_input {
+  font-size: 20px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 20px;
+  width: 600px;
+  font-family: Microsoft JhengHei;
+  max-lines: 2;
+}
+
+#add #add_button {
+  font-size: 20px;
+  padding: 10px;
+  background-color: lemonchiffon;
+}
+
+#add #add_button:hover {
+  background-color: #ddd9b1;
+}
+
+#contents {
+  padding: 20px 0;
+  margin: auto;
+}
+
+#contents .task {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+}
+
+#contents .task h1 {
+  width: 300px;
+  margin: 0;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#contents .task .click_h1 {
+  text-decoration: line-through;
+}
+
+#contents .task .del_button {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #ffcdcd;
+}
+
+#contents .task .del_button:hover {
+  background-color: #dbb1b1;
+}
+
+#contents .task .update_input {
+  font-size: 20px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 20px;
+  font-family: Microsoft JhengHei;
+}
+
+#contents .task .update_button {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #cdffd1;
+}
+
+#contents .task .update_button:hover {
+  background-color: #b2e0b6;
+}
+/*# sourceMappingURL=style.css.map */
